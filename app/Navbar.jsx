@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Bell, ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Bell, ChevronLeft, ChevronRight, MessageCircleMore, Search } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
   return (
@@ -15,10 +16,11 @@ const Navbar = () => {
         />
       </div>
       <div className="flex items-center gap-4">
+        <MessageCircleMore />
         <button className="relative">
           <Bell />
           <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
-            3
+            1
           </span>
         </button>
         <Image
@@ -33,69 +35,71 @@ const Navbar = () => {
   );
 };
 
-const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(false);
+// const Sidebar = () => {
+//   const [collapsed, setCollapsed] = useState(false);
 
-  return (
-    <aside
-      className={`fixed top-0 left-0 h-full bg-white shadow-lg flex flex-col p-4 transition-all duration-700 ${
-        collapsed ? 'w-20' : 'w-64'
-      }`}
-    >
-      <div className="flex items-center justify-between mb-6 ">
-        {!collapsed && (
+//   return (
+//     <aside
+//       className={`fixed top-0 left-0 h-full bg-white shadow-lg flex flex-col p-4 transition-all duration-700 ${
+//         collapsed ? 'w-20' : 'w-64'
+//       }`}
+//     >
+//       <div className="flex items-center justify-between mb-6 ">
+//         {!collapsed && (
           
-          <div className="w-10 h-10 relative ">
-            <Image
-              src="/images/favicon.png"
-              alt="Frox Logo"
-              fill
-              style={{ objectFit: 'contain' }}
-              sizes="40px"
-            />
-            <h1 className="text-xl font-semibold md:absolute md:left-15 md:text-2xl md:text-gray-500 ">Frox</h1>
-          </div>
-        )}
-        <button
-          className="transition-all duration-300"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          {collapsed ? <ChevronRight /> : <ChevronLeft />}
-        </button>
-      </div>
-      {!collapsed && (
-        <nav className="flex-1 ">
-          <ul className="space-y-2 text-gray-700 ">
-            <li className="p-3 rounded-lg bg-purple-100 text-purple-600 font-medium cursor-pointer ">
-              Dashboard
-            </li>
-            <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
-              Products
-            </li>
-            <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
-              Orders
-            </li>
-            <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
-              Payments
-            </li>
-            <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
-              Transactions
-            </li>
-            <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
-              Clients
-            </li>
-          </ul>
-        </nav>
-      )}
+//           <div className="w-10 h-10 relative ">
+//             <Image
+//               src="/images/favicon.png"
+//               alt="Frox Logo"
+//               fill
+//               style={{ objectFit: 'contain' }}
+//               sizes="40px"
+//             />
+//             <h1 className="text-xl font-semibold md:absolute md:left-15 md:text-2xl md:text-gray-500 ">Frox</h1>
+//           </div>
+//         )}
+//         <button
+//           className="transition-all duration-300"
+//           onClick={() => setCollapsed(!collapsed)}
+//         >
+//           {collapsed ? <ChevronRight /> : <ChevronLeft />}
+//         </button>
+//       </div>
+//       {!collapsed && (
+//         <nav className="flex-1 ">
+//           <ul className="space-y-2 text-gray-700 ">
+//             <li className="p-3 rounded-lg bg-purple-100 text-purple-600 font-medium cursor-pointer ">
+//               Dashboard
+//             </li>
+//             <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+//               Products
+//             </li>
+//             <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+//               Orders
+//             </li>
+//             <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+//               Payments
+//             </li>
+//             <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+//               Transactions
+//             </li>
+//             <li className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+//               Clients
+//             </li>
+//           </ul>
+//         </nav>
+//       )}
 
-      {!collapsed && (
-        <div className="mt-auto p-3 border rounded-xl bg-gray-50 text-center text-sm font-medium cursor-pointer ">
-          Upgrade to PRO
-        </div>
-      )}
-    </aside>
-  );
-};
+//       {!collapsed && (
+//         <div className="mt-auto p-3 border rounded-xl bg-gray-50 text-center text-sm font-medium cursor-pointer ">
+//           Upgrade to PRO
+//         </div>
+//       )}
+//     </aside>
+//   );
+// };
+
+<Sidebar />
 
 const DashboardLayout = ({ children }) => {
   return (
