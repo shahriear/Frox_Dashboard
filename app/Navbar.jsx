@@ -1,29 +1,22 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import { Bell, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 
 const Navbar = () => {
   return (
     <header className="flex justify-between items-center p-4 bg-white shadow-xl">
       <div className="flex items-center gap-4 ">
-        <Search className="text-gray-400" />
+        <Search className="text-blue-500" />
         <input
           type="text"
           placeholder="Search"
-          className="border rounded-lg px-3 py-1 w-64 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          className="border border-gray-400 rounded-lg px-3 py-1 w-64 focus:outline-none focus:ring-2 focus:ring-purple-400"
         />
       </div>
       <div className="flex items-center gap-4">
         <button className="relative">
-          {/* <svg
-            className="w-6 h-6 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M15 17h5l-1.405-1.405M19 13V7a7 7 0 10-14 0v6l-1.405 1.405M19 13H5" />
-          </svg> */}
+          <Bell />
           <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">
             3
           </span>
