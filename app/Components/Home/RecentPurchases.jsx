@@ -19,10 +19,10 @@ return (
 <tr key={i} className="border-t text-sm">
 <td className="p-2">Product {i}</td>
 <td className="p-2">#2543{i}</td>
-<td class="p-2">Aug 5th, 2021</td>
-<td class="p-2">Customer {i}</td>
-<td class="p-2">Delivered</td>
-<td class="p-2">$400</td>
+<td className="p-2">Aug 5th, 2021</td>
+<td className="p-2">Customer {i}</td>
+<td className="p-2">Delivered</td>
+<td className="p-2">$400</td>
 </tr>
 ))}
 </tbody>

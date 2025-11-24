@@ -22,7 +22,7 @@ const data = [
 
 export default function SalesPerformance() {
   return (
-    <div className="bg-white shadow rounded-xl p-4 col-span-2 h-80">
+    <div className="bg-white shadow rounded-xl p-4 col-span-2 h-80 -z-10">
       <div className="flex justify-between items-center mb-4">
         <h2 className="font-semibold">Sales Performance</h2>
         <div className="flex gap-3 text-sm text-gray-500">

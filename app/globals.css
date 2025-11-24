@@ -23,6 +23,11 @@
   padding-left: 340;
   margin: 0 auto;
 }
+/* scroll-lock class */
+.scroll-lock {
+  overflow: hidden;
+  height: 100%;
+}
 
 
 /* body {
