@@ -3,7 +3,6 @@ export default function ProductPage() {
     <div className="p-6 my-container">
       <h1 className="text-xl font-semibold mb-4">All Products</h1>
 
-      {/* সার্চ + List/Grid Button */}
       <div className="flex justify-between items-center mb-4">
         <input
           type="text"
@@ -17,13 +16,11 @@ export default function ProductPage() {
         </div>
       </div>
 
-      {/* এখানে তোমার Product Table বসবে */}
       <div className="bg-white p-4 rounded-xl shadow">
         <h2 className="font-semibold mb-4">All Products</h2>
 
         <div className="h-96 overflow-y-auto">
-          {/* শুধু placeholder */}
-          <p>Put your table here…</p>
+          <p>Put your table here..…</p>
         </div>
       </div>
     </div>
