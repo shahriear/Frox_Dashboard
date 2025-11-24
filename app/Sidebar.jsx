@@ -116,10 +116,10 @@ const Sidebar = () => {
       )}
 
       {/* Categories */}
-      <h2 className="text-[15px] font-bold mb-2">Categories</h2>
       <div className=" overflow-y-auto h-auto">
         {!collapsed && (
           <div className="flex- overflow-y-auto h-auto">
+            <h2 className="text-[15px] font-bold mb-2">Categories</h2>
             <ul className="space-y-0.5">
               {categories.map(cat => (
                 <li
@@ -133,7 +133,16 @@ const Sidebar = () => {
                 </li>
               ))}
             </ul>
+            <div className="p-4">
+        <button
+          onClick={() => setOpenCategoryModal(true)}
+          className="w-full bg-blue-600 text-white py-2 rounded-md"
+        >
+          Add Category
+        </button>
+      </div>
           </div>
+          
         )}
       </div>
       {/* <button
@@ -142,14 +151,7 @@ const Sidebar = () => {
       >
         + Add category
       </button> */}
-      <div className="p-4">
-        <button
-          onClick={() => setOpenCategoryModal(true)}
-          className="w-full bg-blue-600 text-white py-2 rounded-md"
-        >
-          Add Category
-        </button>
-      </div>
+      
 
       {/* Top Sellers */}
       {!collapsed && (

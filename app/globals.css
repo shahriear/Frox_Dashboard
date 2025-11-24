@@ -18,6 +18,12 @@
     --foreground: #ededed;
   }
 }
+.my-container {
+  /* max-width: 1080px; */
+  padding-left: 340;
+  margin: 0 auto;
+}
+
 
 /* body {
   background: var(--background);
