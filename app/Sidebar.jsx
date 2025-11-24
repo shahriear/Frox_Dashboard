@@ -3,19 +3,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import CategoryModal from './Components/Home/CategoryModal';
+import Link from 'next/link';
 
 const Sidebar = () => {
   const [openCategoryModal, setOpenCategoryModal] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const [activeItem, setActiveItem] = useState('Dashboard');
-  // const [categories, setCategories] = useState([
-  //   { name: 'Laptops', count: 8 },
-  //   { name: 'Mobile phones', count: 6 },
-  //   { name: 'Desktops', count: 4 },
-  //   { name: 'Accessories', count: 3 },
-  //   { name: 'Portable storage', count: 9 },
-  //   { name: 'Networking', count: 2 },
-  // ]);
+  
   const [categories, setCategories] = useState([
     { id: 1, name: 'Laptops', count: 8 },
     { id: 2, name: 'Mobile phones', count: 6 },
@@ -43,13 +37,7 @@ const Sidebar = () => {
     '/images/48px.png',
   ];
 
-  // Add new category
-  // const handleAddCategory = () => {
-  //   const newCategory = prompt('Enter category name:');
-  //   if (newCategory) {
-  //     setCategories([...categories, { name: newCategory, count: 0 }]);
-  //   }
-  // };
+  
   const handleAddCategory = () => {
     const newCategoryName = prompt('Enter category name:');
     if (newCategoryName) {
@@ -96,19 +84,36 @@ const Sidebar = () => {
 
       {/* Navigation */}
       {!collapsed && (
+        // <nav className="flex flex-col mb-7">
+        //   <ul className="space-y-0 text-gray-700">
+        //     {navItems.map(item => (
+        //       <li
+        //         key={item}
+        //         onClick={() => setActiveItem(item)}
+        //         className={`p-2 rounded-lg cursor-pointer transition-colors duration-300 ${
+        //           activeItem === item
+        //             ? 'bg-purple-100 text-purple-600 font-medium'
+        //             : 'hover:bg-gray-100'
+        //         }`}
+        //       >
+        //         {item}
+        //       </li>
+        //     ))}
+        //   </ul>
+        // </nav>
         <nav className="flex flex-col mb-7">
           <ul className="space-y-0 text-gray-700">
             {navItems.map(item => (
               <li
                 key={item}
-                onClick={() => setActiveItem(item)}
                 className={`p-2 rounded-lg cursor-pointer transition-colors duration-300 ${
                   activeItem === item
                     ? 'bg-purple-100 text-purple-600 font-medium'
                     : 'hover:bg-gray-100'
                 }`}
+                onClick={() => setActiveItem(item)}
               >
-                {item}
+                <Link href={`/${item.toLowerCase()}`}>{item}</Link>
               </li>
             ))}
           </ul>
@@ -134,24 +139,16 @@ const Sidebar = () => {
               ))}
             </ul>
             <div className="p-4">
-        <button
-          onClick={() => setOpenCategoryModal(true)}
-          className="w-full bg-blue-600 text-white py-2 rounded-md"
-        >
-          Add Category
-        </button>
-      </div>
+              <button
+                onClick={() => setOpenCategoryModal(true)}
+                className="w-full bg-blue-600 text-white py-2 rounded-md"
+              >
+                Add Category
+              </button>
+            </div>
           </div>
-          
         )}
       </div>
-      {/* <button
-        onClick={handleAddCategory}
-        className="mt-2 text-blue-500 text-sm"
-      >
-        + Add category
-      </button> */}
-      
 
       {/* Top Sellers */}
       {!collapsed && (
@@ -175,8 +172,6 @@ const Sidebar = () => {
         </div>
       )}
 
-
-      
       {/* Modal */}
       {openCategoryModal && (
         <CategoryModal onClose={() => setOpenCategoryModal(false)} />
