@@ -255,7 +255,7 @@ const ProductDetails = ({ productId }) => {
             Delete
           </button>
           <button className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition">
-            Update
+            Updatee
           </button>
         </div>
       </div>
