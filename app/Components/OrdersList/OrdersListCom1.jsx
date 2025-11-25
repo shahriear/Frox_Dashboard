@@ -4,8 +4,7 @@ import React, { useMemo, useState } from 'react';
 import ActionsDropdown from './ActionsDropdown';
 import OrderDetailsModal from './OrderDetailsModal';
 
-// OrdersList.jsx - Single-file React component (Tailwind CSS required)
-// Usage: place this file in app/OrdersList/page.jsx (Next.js App Router) or inside components and import into a page.
+
 
 const SAMPLE_ORDERS = Array.from({ length: 15 }).map((_, i) => ({
   id: 25413 + i,
