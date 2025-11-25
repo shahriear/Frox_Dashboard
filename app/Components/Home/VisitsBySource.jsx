@@ -20,7 +20,7 @@ const COLORS = ["#4F46E5", "#06B6D4", "#10B981", "#F59E0B"];
 
 export default function VisitsBySource() {
   return (
-    <div className="bg-white shadow-2xl rounded-xl p-4 h-64">
+    <div className="bg-white -z-10 shadow-2xl rounded-xl p-4 h-64">
       <h2 className="font-semibold mb-4">Visits by Source</h2>
 
       <ResponsiveContainer width="100%" height="80%">

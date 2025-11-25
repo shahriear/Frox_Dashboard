@@ -14,24 +14,49 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ececec;
+    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
-.my-container {
-  /* max-width: 1080px; */
-  padding-left: 340;
-  margin: 0 auto;
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-/* scroll-lock class */
-.scroll-lock {
-  overflow: hidden;
-  height: 100%;
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.sidebar-enter {
+  animation: slideInLeft 0.3s ease-in-out forwards;
+}
+
+.sidebar-exit {
+  animation: slideOutLeft 0.3s ease-in-out forwards;
 }
 
 
-/* body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+
+
+
+
+
+
+
+
+
+

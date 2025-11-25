@@ -21,7 +21,7 @@ const data = [
 
 export default function TotalRevenue() {
   return (
-    <div className="bg-white shadow-2xl rounded-xl p-4 h-64">
+    <div className="bg-white -z-10 shadow-2xl rounded-xl p-4 h-64">
       <h2 className="font-semibold mb-4">Total Revenue</h2>
 
       <ResponsiveContainer width="100%" height="80%">

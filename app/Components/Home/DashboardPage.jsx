@@ -11,7 +11,7 @@ import TotalRevenue from "./TotalRevenue";
 
 export default function DashboardPage() {
   return (
-    <div className="p-6 space-y-6 my-container">
+    <div className="p-6 space-y-6 my-container ">
       <Breadcrumb />
 
       <div className="flex justify-between items-center">
@@ -33,7 +33,7 @@ export default function DashboardPage() {
 
       <RecentPurchases />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
         <MarketOverview />
         <VisitsBySource />
         <TotalRevenue />
