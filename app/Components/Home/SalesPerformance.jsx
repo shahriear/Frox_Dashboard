@@ -1,8 +1,14 @@
 "use client";
 
-import { 
-  LineChart, Line, XAxis, YAxis, Tooltip, 
-  CartesianGrid, ResponsiveContainer, Legend 
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ResponsiveContainer,
+  Legend,
 } from "recharts";
 
 const data = [
@@ -22,29 +28,34 @@ const data = [
 
 export default function SalesPerformance() {
   return (
-    <div className="bg-white shadow rounded-xl p-4 col-span-2 h-80 -z-10">
+    <div className="bg-white shadow rounded-xl p-4 col-span-2 h-96 min-h-[380px]">
+      {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="font-semibold">Sales Performance</h2>
+
         <div className="flex gap-3 text-sm text-gray-500">
           <span className="cursor-pointer hover:text-gray-700">Today’s</span>
           <span className="cursor-pointer text-gray-800 font-semibold">Monthly</span>
         </div>
       </div>
 
-      <ResponsiveContainer width="100%" height="90%">
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
+      {/* Chart Container (Fix height issue) */}
+      <div className="w-full h-[300px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="month" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
 
-          <Line type="monotone" dataKey="Completed" stroke="#FF6B6B" strokeWidth={3} />
-          <Line type="monotone" dataKey="Pending" stroke="#845EC2" strokeWidth={3} />
-          <Line type="monotone" dataKey="Unpaid" stroke="#FFC75F" strokeWidth={3} />
-          <Line type="monotone" dataKey="Delivered" stroke="#4D96FF" strokeWidth={3} />
-        </LineChart>
-      </ResponsiveContainer>
+            <Line type="monotone" dataKey="Completed" stroke="#FF6B6B" strokeWidth={3} />
+            <Line type="monotone" dataKey="Pending" stroke="#845EC2" strokeWidth={3} />
+            <Line type="monotone" dataKey="Unpaid" stroke="#FFC75F" strokeWidth={3} />
+            <Line type="monotone" dataKey="Delivered" stroke="#4D96FF" strokeWidth={3} />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 }

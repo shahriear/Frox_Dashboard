@@ -42,11 +42,11 @@
 }
 
 .sidebar-enter {
-  animation: slideInLeft 0.3s ease-in-out forwards;
+  animation: slideInLeft 0.5s ease-in-out forwards;
 }
 
 .sidebar-exit {
-  animation: slideOutLeft 0.3s ease-in-out forwards;
+  animation: slideOutLeft 0.5s ease-in-out forwards;
 }
 
 
