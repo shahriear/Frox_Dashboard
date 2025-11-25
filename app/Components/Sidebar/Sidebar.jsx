@@ -33,7 +33,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Dashboard')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Dashboard') ? 'bg-white/30' : ''
@@ -49,7 +49,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/AllProducts')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/AllProducts') ? 'bg-white/30' : ''
@@ -65,7 +65,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/OrdersList')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/OrdersList') ? 'bg-white/30' : ''
@@ -81,7 +81,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Payments')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Payments') ? 'bg-white/30' : ''
@@ -97,7 +97,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/TransationsList')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/TransationsList') ? 'bg-white/30' : ''
@@ -113,7 +113,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Clints')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 hover:bg-gray-50'
+                            : 'text-gray-500 hover:bg-gray-200'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Clints') ? 'bg-white/30' : ''
