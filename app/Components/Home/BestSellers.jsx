@@ -7,7 +7,7 @@ const sellers = [
   {
     id: 1,
     name: "John Carter",
-    image: "/images/img1.png",
+    image: "/photos/Avatar.png",
     category: "Electronics",
     sales: 1200,
     soldCount: 340,
@@ -15,7 +15,7 @@ const sellers = [
   {
     id: 2,
     name: "Sophia Karim",
-    image: "/images/img2.png",
+    image: "/photos/Avatar.png",
     category: "Fashion",
     sales: 980,
     soldCount: 290,
@@ -23,7 +23,7 @@ const sellers = [
   {
     id: 3,
     name: "Mark Thompson",
-    image: "/images/img1.png",
+    image: "/photos/Avatar.png",
     category: "Groceries",
     sales: 760,
     soldCount: 210,

@@ -24,7 +24,7 @@ const Sidebar = ({ onLinkClick }) => {
     }
 
     return (
-        <div className="w-64 bg-white h-screen overflow-y-auto p-6">
+        <div className="w-64 bg-white h-screen overflow-y-auto p-6 ">
 
             {/* Menu Items */}
             <div className="space-y-2">
