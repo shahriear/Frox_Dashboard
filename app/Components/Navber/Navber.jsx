@@ -17,7 +17,7 @@ const Navber = ({ onToggleSidebar, sidebarOpen }) => {
     return (
         <>
             {/* Desktop & Tablet Navigation */}
-            <div className=" bg-gray-200 shadow-xl hidden sm:flex w-full h-16 sm:h-20 lg:h-24 items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className=" bg-gray-100 shadow-xl hidden sm:flex w-full h-16 sm:h-20 lg:h-24 items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center gap-4 sm:gap-8 md:gap-40 lg:gap-64 justify-center lg:justify-center">
         
                     <div className="flex">
@@ -41,14 +41,14 @@ const Navber = ({ onToggleSidebar, sidebarOpen }) => {
                     {/* Search Bar - Hidden on small tablets, visible on larger */}
                     <div className="hidden md:block w-32 sm:w-40 lg:w-[360px] h-8 sm:h-10 lg:h-12 shrink-0">
                         <input 
-                            className='w-full h-full shadow-2xs bg-[#F5F5FA] pl-4 sm:pl-8 lg:pl-10 rounded-2xl text-xs sm:text-sm lg:text-base' 
+                            className='w-full h-full border border-gray-500 shadow-2xs bg-[#F5F5FA] pl-4 sm:pl-8 lg:pl-10 rounded-2xl text-xs sm:text-sm lg:text-base' 
                             placeholder='Search' 
                             type="search" 
                         />
                     </div>
         
                     {/* Browse Section - Hidden on small screens */}
-                    <div className="hidden lg:flex items-center gap-2 lg:gap-5 shrink-0">
+                    <div className="hidden border border-gray-300 bg-white lg:flex items-center gap-2 lg:gap-5 shrink-0">
                         <TbExternalLink className="text-sm lg:text-base"/>
                         <p className="text-xs lg:text-base">Browse</p>
                         <IoIosArrowDown className="text-xs lg:text-base"/>
