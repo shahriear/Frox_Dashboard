@@ -10,7 +10,8 @@ export default function FilterBar() {
         <option>Pending</option>
       </select>
 
-      <input 
+      <div>
+        <input 
         type="date"
         className="border p-2 rounded-md"
       />
@@ -25,6 +26,7 @@ export default function FilterBar() {
       <button className="border px-4 py-2 rounded-md">
         Filters
       </button>
+      </div>
 
       <div className="ml-auto text-gray-600">
         <span>📅 Feb 15, 2022 – Feb 21, 2022</span>
