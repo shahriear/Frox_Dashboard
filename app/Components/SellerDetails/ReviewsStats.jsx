@@ -1,0 +1,140 @@
+// export default function ReviewsStats() {
+//   return (
+//     <div className="bg-white shadow rounded-lg p-6 mt-6">
+//       <h3 className="font-semibold mb-2">Customer Reviews</h3>
+
+//       <div className="flex items-center gap-2">
+//         <div className="text-yellow-500 text-xl">★★★★★</div>
+//         <span className="text-gray-600">(12k rates)</span>
+//       </div>
+
+//       <h4 className="mt-4 mb-2 font-semibold">Total 12k reviews</h4>
+
+//       <div className="space-y-2">
+//         {[5, 4, 3, 2, 1].map(star => (
+//           <div key={star} className="flex items-center gap-2">
+//             <span className="w-10">{star} star</span>
+//             <div className="w-full h-2 bg-gray-200 rounded">
+//               <div
+//                 className="h-full bg-purple-500 rounded"
+//                 style={{ width: `${star * 15}%` }}
+//               ></div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+//       <div className="mt-6">
+//         <h4 className="font-semibold mb-2">Contact this seller</h4>
+//         <input
+//           placeholder="Subject"
+//           className="border p-2 w-full rounded mb-2"
+//         />
+//         <textarea
+//           placeholder="Message"
+//           className="border p-2 w-full h-20 rounded"
+//         ></textarea>
+//         <button className="bg-indigo-600 text-white w-full py-2 mt-2 rounded">
+//           Send message
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+export default function ReviewsStats() {
+  return (
+    <div className="bg-white shadow rounded-xl p-6">
+      {/* Title */}
+      <h3 className="font-semibold mb-3 text-lg">Customer Reviews</h3>
+
+      {/* Stars + Rates */}
+      <div className="flex items-center gap-3 mb-4">
+        <div className="text-yellow-400 text-2xl">★★★★★</div>
+        <span className="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-md">
+          12k rates
+        </span>
+      </div>
+
+      {/* Total reviews */}
+      <h4 className="text-gray-800 font-semibold mb-3">Total 12k reviews</h4>
+
+      {/* Star Progress Bars */}
+      <div className="space-y-3">
+        {/* 5 star */}
+        <div className="flex items-center gap-3">
+          <span className="w-12 text-sm text-gray-600">5 star</span>
+          <div className="flex-1 bg-gray-200 h-2 rounded">
+            <div
+              className="bg-purple-600 h-2 rounded"
+              style={{ width: '95%' }}
+            ></div>
+          </div>
+        </div>
+
+        {/* 4 star */}
+        <div className="flex items-center gap-3">
+          <span className="w-12 text-sm text-gray-600">4 star</span>
+          <div className="flex-1 bg-gray-200 h-2 rounded">
+            <div
+              className="bg-green-400 h-2 rounded"
+              style={{ width: '70%' }}
+            ></div>
+          </div>
+        </div>
+
+        {/* 3 star */}
+        <div className="flex items-center gap-3">
+          <span className="w-12 text-sm text-gray-600">3 star</span>
+          <div className="flex-1 bg-gray-200 h-2 rounded">
+            <div
+              className="bg-blue-400 h-2 rounded"
+              style={{ width: '50%' }}
+            ></div>
+          </div>
+        </div>
+
+        {/* 2 star */}
+        <div className="flex items-center gap-3">
+          <span className="w-12 text-sm text-gray-600">2 star</span>
+          <div className="flex-1 bg-gray-200 h-2 rounded">
+            <div
+              className="bg-orange-400 h-2 rounded"
+              style={{ width: '30%' }}
+            ></div>
+          </div>
+        </div>
+
+        {/* 1 star */}
+        <div className="flex items-center gap-3">
+          <span className="w-12 text-sm text-gray-600">1 star</span>
+          <div className="flex-1 bg-gray-200 h-2 rounded">
+            <div
+              className="bg-red-400 h-2 rounded"
+              style={{ width: '10%' }}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact seller form */}
+      <div className="mt-6">
+        <h4 className="font-semibold mb-2">Contact this seller</h4>
+
+        <input
+          placeholder="Subject"
+          className="border p-2 w-full rounded mb-3"
+        />
+
+        <textarea
+          placeholder="Message"
+          className="border p-2 w-full h-24 rounded mb-3"
+        ></textarea>
+
+        <button className="bg-indigo-600 text-white w-full py-2 rounded">
+          Send message
+        </button>
+      </div>
+    </div>
+  );
+}
