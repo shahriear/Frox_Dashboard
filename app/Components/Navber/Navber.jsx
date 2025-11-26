@@ -9,6 +9,7 @@ import { BiSolidMessageDots } from 'react-icons/bi'
 import { IoNotifications } from 'react-icons/io5'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineClose } from 'react-icons/ai'
+import Link from 'next/link';
 
 const Navber = ({ onToggleSidebar, sidebarOpen }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -21,9 +22,10 @@ const Navber = ({ onToggleSidebar, sidebarOpen }) => {
         
                     <div className="flex">
                         {/* Logo */}
+                    <Link href={'/'}>
                     <div className="Logo w-20 h-5 sm:w-24 sm:h-6 lg:w-[148px] lg:h-[39.29px] shrink-0">
                         <Image src={Logo} alt='Logo' className='w-full h-full'/>
-                    </div>
+                    </div></Link>
 
                     {/* button or trigger the side button */}
                     <button 
