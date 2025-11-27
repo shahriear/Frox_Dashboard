@@ -1,43 +1,43 @@
-'use client';
+// 'use client';
 
-import { useState, useEffect } from "react";
-import Navber from './Components/Navber/Navber';
-import Sidebar from './Components/Sidebar/Sidebar';
+// import { useState, useEffect } from "react";
+// import Navber from './Components/Navber/Navber';
+// import Sidebar from './Components/Sidebar/Sidebar';
 
-export default function RootLayoutClient({ children }: { children: React.ReactNode }) {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+// export default function RootLayoutClient({ children }: { children: React.ReactNode }) {
+//   const [sidebarOpen, setSidebarOpen] = useState(true);
+//   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 640);
+//   useEffect(() => {
+//     setIsMobile(window.innerWidth < 640);
 
-    const handleResize = () => setIsMobile(window.innerWidth < 640);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+//     const handleResize = () => setIsMobile(window.innerWidth < 640);
+//     window.addEventListener('resize', handleResize);
+//     return () => window.removeEventListener('resize', handleResize);
+//   }, []);
 
-  return (
-    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
-      {/* Navbar fixed at top */}
-      <div className="flex-shrink-0">
-        <Navber 
-          onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} 
-          sidebarOpen={sidebarOpen} 
-        />
-      </div>
+//   return (
+//     <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-950 transition-colors duration-300">
+//       {/* Navbar fixed at top */}
+//       <div className="flex-shrink-0">
+//         <Navber 
+//           onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} 
+//           sidebarOpen={sidebarOpen} 
+//         />
+//       </div>
 
-      {/* Main area */}
-      <div className="flex flex-1 h-[calc(100%-64px)] sm:h-[calc(100%-80px)] lg:h-[calc(100%-96px)]">
-        {/* Sidebar fixed on the left */}
-        <div className={`${sidebarOpen ? 'w-64' : 'w-0'} flex-shrink-0 transition-width duration-300 overflow-hidden`}>
-          {sidebarOpen && <Sidebar onLinkClick={isMobile ? () => setSidebarOpen(false) : undefined} />}
-        </div>
+//       {/* Main area */}
+//       <div className="flex flex-1 h-[calc(100%-64px)] sm:h-[calc(100%-80px)] lg:h-[calc(100%-96px)]">
+//         {/* Sidebar fixed on the left */}
+//         <div className={`${sidebarOpen ? 'w-64' : 'w-0'} flex-shrink-0 transition-width duration-300 overflow-hidden`}>
+//           {sidebarOpen && <Sidebar onLinkClick={isMobile ? () => setSidebarOpen(false) : undefined} />}
+//         </div>
 
-        {/* Scrollable content area */}
-        <div className="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
+//         {/* Scrollable content area */}
+//         <div className="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+//           {children}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
