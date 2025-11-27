@@ -53,8 +53,8 @@ const data = [
 
 export default function TotalRevenue() {
   return (
-    <div className="bg-white dark:bg-slate-800 shadow-2xl dark:shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
-      <h2 className="font-semibold mb-4">Total Revenue</h2>
+    <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
+      <h2 className="font-semibold dark:text-white mb-4">Total Revenue</h2>
 
       {/* FIX: wrapper for responsive height */}
       <div className="w-full h-[220px]">

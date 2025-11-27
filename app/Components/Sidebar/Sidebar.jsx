@@ -25,18 +25,16 @@ const Sidebar = ({ onLinkClick }) => {
     }
 
     return (
-        <div className="w-64 bg-white dark:bg-slate-800 dark:text-white h-screen flex flex-col p-6 transition-colors duration-300">
+        <div className="w-64 bg-white dark:bg-gray-900 h-screen overflow-y-auto p-6 border-r border-gray-200 dark:border-gray-800">
 
-            {/* Scrollable Content */}
-            <div className="flex-1 overflow-y-auto">
-                {/* Menu Items */}
-                <div className="space-y-2">
+            {/* Menu Items */}
+            <div className="space-y-2">
                 {/* Dashboard */}
                 <Link href="/Dashboard" onClick={handleLinkClick}>
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Dashboard')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Dashboard') ? 'bg-white/30' : ''
@@ -52,7 +50,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/AllProducts')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/AllProducts') ? 'bg-white/30' : ''
@@ -68,7 +66,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/OrdersList')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/OrdersList') ? 'bg-white/30' : ''
@@ -84,7 +82,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Payments')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Payments') ? 'bg-white/30' : ''
@@ -100,7 +98,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/TransationsList')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/TransationsList') ? 'bg-white/30' : ''
@@ -116,7 +114,7 @@ const Sidebar = ({ onLinkClick }) => {
                     <div className={`flex items-center gap-3 rounded-lg px-4 py-3 cursor-pointer transition ${
                         isActive('/Clints')
                             ? 'bg-linear-to-r from-purple-500 to-purple-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800'
                     }`}>
                         <div className={`w-5 h-5 rounded flex items-center justify-center ${
                             isActive('/Clints') ? 'bg-white/30' : ''
@@ -126,90 +124,85 @@ const Sidebar = ({ onLinkClick }) => {
                         <span className="text-sm font-medium">Clients</span>
                     </div>
                 </Link>
-                </div>
+            </div>
 
-                {/* Divider */}
-                <div className="border-t border-gray-200 dark:border-slate-700 my-6"></div>
+            {/* Divider */}
+            <div className="border-t border-gray-200 my-6"></div>
 
-                {/* Categories Section */}
-                <div>
-                    <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-4">Categories</h3>
+            {/* Categories Section */}
+            <div>
+                <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-4">Categories</h3>
                 <div className="space-y-3">
-                        {/* Laptops */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Laptops */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Laptops</span>
-                            <span className="bg-yellow-300 text-yellow-900 text-xs font-semibold px-2 py-1 rounded-full">8</span>
-                        </div>
+                        <span className="bg-yellow-300 text-yellow-900 text-xs font-semibold px-2 py-1 rounded-full">8</span>
+                    </div>
 
-                        {/* Mobile phones */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Mobile phones */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Mobile phones</span>
-                            <span className="bg-orange-400 text-white text-xs font-semibold px-2 py-1 rounded-full">6</span>
-                        </div>
+                        <span className="bg-orange-400 text-white text-xs font-semibold px-2 py-1 rounded-full">6</span>
+                    </div>
 
-                        {/* Desktops */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Desktops */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Desktops</span>
-                        </div>
+                    </div>
 
-                        {/* Accessories */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Accessories */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Accessories</span>
-                            <span className="bg-pink-400 text-white text-xs font-semibold px-2 py-1 rounded-full">5</span>
-                        </div>
+                        <span className="bg-pink-400 text-white text-xs font-semibold px-2 py-1 rounded-full">5</span>
+                    </div>
 
-                        {/* Portable storage */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Portable storage */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Portable storage</span>
-                            <span className="bg-cyan-400 text-white text-xs font-semibold px-2 py-1 rounded-full">9</span>
-                        </div>
+                        <span className="bg-cyan-400 text-white text-xs font-semibold px-2 py-1 rounded-full">9</span>
+                    </div>
 
-                        {/* Networking */}
-                        <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors duration-300">
+                    {/* Networking */}
+                    <div className="flex items-center justify-between text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer">
                         <span className="text-sm">Networking</span>
-                        </div>
-                    </div>
-
-                    {/* Add category */}
-                    <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer mt-4 pt-4 border-t border-gray-200 dark:border-slate-700 transition-colors duration-300">
-                        <div className="w-5 h-5">
-                            {/* Plus Icon Placeholder */}
-                        </div>
-                        <span className="text-sm font-medium">Add category</span>
                     </div>
                 </div>
 
-                {/* Divider */}
-                <div className="border-t border-gray-200 dark:border-slate-700 my-6"></div>
-
-                {/* Top Sellers Section */}
-                <div>
-                    <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-4">Top Sellers</h3>
-                    <div className="flex gap-2">
-                        {/* Seller Avatars - Placeholder for photos */}
-                        <div className="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-400 dark:text-gray-500">
-                            {/* Avatar 1 */}
-                        </div>
-                        <div className="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-400 dark:text-gray-500">
-                            {/* Avatar 2 */}
-                        </div>
-                        <div className="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-400 dark:text-gray-500">
-                            {/* Avatar 3 */}
-                        </div>
-                        <div className="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-400 dark:text-gray-500">
-                            {/* Avatar 4 */}
-                        </div>
-                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white cursor-pointer">
-                            {/* More Icon Placeholder */}
-                        </div>
+                {/* Add category */}
+                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 cursor-pointer mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="w-5 h-5">
+                        {/* Plus Icon Placeholder */}
                     </div>
+                    <span className="text-sm font-medium">Add category</span>
                 </div>
             </div>
 
-            {/* Fixed Theme Toggle Button at Bottom */}
-            <div className="border-t border-gray-200 dark:border-slate-700 pt-4 mt-auto">
-                <ThemeToggleButton/>
+            {/* Divider */}
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6"></div>
+
+            {/* Top Sellers Section */}
+            <div>
+                <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-4">Top Sellers</h3>
+                <div className="flex gap-2">
+                    {/* Seller Avatars - Placeholder for photos */}
+                    <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-400">
+                        {/* Avatar 1 */}
+                    </div>
+                    <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-400">
+                        {/* Avatar 2 */}
+                    </div>
+                    <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-400">
+                        {/* Avatar 3 */}
+                    </div>
+                    <div className="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-400">
+                        {/* Avatar 4 */}
+                    </div>
+                    <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white cursor-pointer">
+                        {/* More Icon Placeholder */}
+                    </div>
+                </div>
             </div>
+            <ThemeToggleButton/>
 
         </div>
     )

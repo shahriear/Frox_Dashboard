@@ -53,13 +53,13 @@ export default function RecentPurchases() {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 shadow dark:shadow-lg rounded-xl p-6 transition-colors duration-300">
-      <h2 className="font-semibold mb-4 text-lg dark:text-gray-100 transition-colors duration-300">Recent Purchases</h2>
+    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 transition-colors duration-300">
+      <h2 className="font-semibold mb-4 text-lg dark:text-white">Recent Purchases</h2>
 
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="text-gray-500 dark:text-gray-400 text-sm border-b border-gray-400 dark:border-slate-600 transition-colors duration-300">
+            <tr className="text-gray-500 dark:text-gray-400 text-sm border-b border-gray-400 dark:border-gray-700">
               <th className="p-3"><input type="checkbox" /></th>
               <th className="p-3">Product</th>
               <th className="p-3">Order ID</th>
@@ -73,19 +73,19 @@ export default function RecentPurchases() {
 
           <tbody>
             {data.map((item) => (
-              <tr key={item.id} className="border-b border-gray-300 dark:border-slate-600 text-sm hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-300 dark:text-gray-100">
+              <tr key={item.id} className="border-b border-gray-300 dark:border-gray-700 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
                 <td className="p-3">
                   <input type="checkbox" />
                 </td>
 
                 {/* Product */}
-                <td className="p-3 font-medium dark:text-gray-100 transition-colors duration-300">{item.product}</td>
+                <td className="p-3 font-medium">{item.product}</td>
 
-                <td className="p-3 dark:text-gray-100 transition-colors duration-300">{item.orderId}</td>
-                <td className="p-3 dark:text-gray-100 transition-colors duration-300">{item.date}</td>
+                <td className="p-3">{item.orderId}</td>
+                <td className="p-3">{item.date}</td>
 
                 {/* Customer with image */}
-                <td className="p-3 dark:text-gray-100 transition-colors duration-300">
+                <td className="p-3">
                   <div className="flex items-center gap-2">
                     <Image
                       src={item.img}
@@ -110,12 +110,12 @@ export default function RecentPurchases() {
                   </div>
                 </td>
 
-                <td className="p-3 font-medium dark:text-gray-100 transition-colors duration-300">{item.amount}</td>
+                <td className="p-3 font-medium">{item.amount}</td>
 
                 {/* Actions */}
                 <td className="p-3">
-                  <button className="p-1 rounded hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors duration-300">
-                    <MoreHorizontal className="text-gray-600 dark:text-gray-400 transition-colors duration-300" />
+                  <button className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <MoreHorizontal className="text-gray-600 dark:text-gray-400" />
                   </button>
                 </td>
 

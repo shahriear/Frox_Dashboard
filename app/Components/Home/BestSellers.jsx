@@ -34,35 +34,35 @@ export default function BestSellers() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="bg-white dark:bg-slate-800 shadow dark:shadow-lg rounded-xl p-4 h-full transition-colors duration-300">
+    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-4 h-full transition-colors duration-300">
       {/* Top Section */}
       <div className="flex justify-between items-center mb-4 relative">
-        <h2 className="font-semibold text-lg dark:text-gray-100 transition-colors duration-300">Best Sellers</h2>
+        <h2 className="font-semibold text-lg dark:text-white">Best Sellers</h2>
 
         <button
           onClick={() => setOpenMenu(!openMenu)}
-          className="p-2 hover:bg-gray-200 dark:hover:bg-slate-700 rounded-full transition-colors duration-300"
+          className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors"
         >
           <MoreVertical size={20} />
         </button>
 
         {/* Dropdown Menu */}
         {openMenu && (
-          <div className="absolute right-0 top-10 w-48 bg-gray-100 dark:bg-slate-700 border border-yellow-600 shadow dark:shadow-lg rounded-2xl z-20 transition-colors duration-300">
+          <div className="absolute right-0 top-10 w-48 bg-gray-100 dark:bg-gray-700 border border-yellow-600 shadow rounded-2xl z-20 transition-colors">
             <ul className="text-sm dark:text-gray-200">
-              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-slate-600 rounded-2xl cursor-pointer transition-colors duration-300">
+              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-2xl cursor-pointer transition-colors">
                 Sales report
               </li>
-              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-slate-600 rounded-2xl cursor-pointer transition-colors duration-300">
+              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-2xl cursor-pointer transition-colors">
                 Export report
               </li>
-              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-slate-600 rounded-2xl cursor-pointer transition-colors duration-300">
+              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-2xl cursor-pointer transition-colors">
                 Profit manage
               </li>
-              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-slate-600 rounded-2xl cursor-pointer transition-colors duration-300">
+              <li className="px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-2xl cursor-pointer transition-colors">
                 Revenue report
               </li>
-              <li className="px-4 py-2 hover:bg-red-100 dark:hover:bg-red-900/30 rounded-2xl text-red-600 dark:text-red-400 font-bold cursor-pointer transition-colors duration-300">
+              <li className="px-4 py-2 hover:bg-red-100 dark:hover:bg-red-900 rounded-2xl text-red-600 dark:text-red-400 font-bold cursor-pointer transition-colors">
                 Remove widget
               </li>
             </ul>
@@ -75,7 +75,7 @@ export default function BestSellers() {
         {sellers.map((seller) => (
           <div
             key={seller.id}
-            className="flex items-center justify-between bg-gray-100 dark:bg-slate-700 p-3 rounded-xl transition-colors duration-300"
+            className="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-3 rounded-xl transition-colors"
           >
             <div className="flex items-center gap-3">
               <Image
@@ -86,8 +86,8 @@ export default function BestSellers() {
                 className="rounded-full"
               />
               <div>
-                <p className="font-medium text-sm dark:text-gray-100 transition-colors duration-300">{seller.name}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                <p className="font-medium text-sm dark:text-white">{seller.name}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
                   Category: {seller.category}
                 </p>
                 
@@ -95,10 +95,10 @@ export default function BestSellers() {
             </div>
 
             <div>
-              <span className="text-green-600 font-semibold">
+              <span className="text-green-600 dark:text-green-400 font-semibold">
                 ${seller.sales.toLocaleString()}
               </span>
-              <p className="text-xs font-medium text-gray-500 dark:text-gray-400 transition-colors duration-300">{seller.soldCount} Sales </p>
+              <p className="text-xs font-medium text-gray-500">{seller.soldCount} Sales </p>
             </div>
           </div>
         ))}
