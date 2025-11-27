@@ -1,6 +1,6 @@
 export default function Filters() {
   return (
-    <div className="flex flex-wrap gap-4 bg-white shadow p-4 rounded-lg mb-6">
+    <div className="flex flex-wrap gap-4 bg-white dark:bg-slate-700 shadow p-4 rounded-lg mb-6 transition-colors duration-300">
       <select className="border p-2 rounded w-40">
         <option>All Category</option>
       </select>

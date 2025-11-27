@@ -2,13 +2,13 @@ import TransactionRow from "./TransactionRow";
 
 export default function TransactionTable({ title, data }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm mb-10">
+    <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-sm mb-10 transition-colors duration-300">
 
-      <h2 className="text-lg font-semibold mb-4">{title}</h2>
+      <h2 className="text-lg font-semibold mb-4 transition-colors duration-300">{title}</h2>
 
-      <table className="w-full text-left">
+      <table className="w-full text-left transition-colors duration-300">
         <thead>
-          <tr className="border-b">
+          <tr className="border-b transition-colors duration-300">
             <th></th>
             <th>Order ID</th>
             <th>Paid</th>

@@ -19,7 +19,7 @@ export function DateRange() {
   }, []);
 
   return (
-    <div className="flex items-center gap-2 bg-white shadow px-4 py-2 rounded-xl">
+    <div className="flex items-center gap-2 bg-white dark:bg-gray-800 dark:text-white shadow px-4 py-2 rounded-xl transition-colors">
       <Calendar size={18} />
       <span>{dateRange}</span>
     </div>

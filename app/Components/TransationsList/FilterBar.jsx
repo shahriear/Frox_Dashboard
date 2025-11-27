@@ -2,7 +2,7 @@
 
 export default function FilterBar() {
   return (
-    <div className="flex items-center flex-wrap gap-4 bg-white p-4 rounded-lg shadow-sm mb-6">
+    <div className="flex items-center flex-wrap gap-4 bg-white dark:bg-slate-700 p-4 rounded-lg shadow-sm mb-6 transition-colors duration-300">
       
       <select className="border p-2 rounded-md min-w-[150px]">
         <option>All Category</option>
@@ -28,7 +28,7 @@ export default function FilterBar() {
       </button>
       </div>
 
-      <div className="ml-auto text-gray-600">
+      <div className="ml-auto text-gray-600 dark:text-gray-300 transition-colors duration-300">
         <span>📅 Feb 15, 2022 – Feb 21, 2022</span>
       </div>
     </div>

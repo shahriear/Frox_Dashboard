@@ -68,16 +68,16 @@ export default function OrdersListCom1() {
   }
 
   return (
-    <div className="p-6 bg-gray-100 ">
-      <div className=" mx-auto bg-white rounded-lg shadow-sm border  border-gray-300 p-6">
+    <div className="p-6 bg-gray-100 dark:bg-slate-700  transition-colors duration-300">
+      <div className=" mx-auto bg-white dark:bg-slate-700 rounded-lg shadow-sm border  border-gray-300 dark:border-slate-600 p-6 transition-colors duration-300">
         <div className="flex items-start justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold">Orders List</h2>
-            <nav className="text-xs text-gray-400 mt-1">
-              Home &gt; <span className="text-indigo-600">Order List</span>
+            <h2 className="text-2xl font-bold transition-colors duration-300">Orders List</h2>
+            <nav className="text-xs text-gray-400 dark:text-gray-500 dark:text-gray-400 mt-1 transition-colors duration-300">
+              Home &gt; <span className="text-indigo-600 transition-colors duration-300">Order List</span>
             </nav>
           </div>
-          <div className="text-sm text-gray-400">
+          <div className="text-sm text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300">
             Feb 15, 2022 - Feb 21, 2022
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function OrdersListCom1() {
           <select
             value={filterCategory}
             onChange={e => setFilterCategory(e.target.value)}
-            className="px-4 py-2 border rounded-lg bg-white text-sm"
+            className="px-4 py-2 border rounded-lg bg-white dark:bg-slate-700 text-sm transition-colors duration-300"
           >
             <option>All Category</option>
             <option>Electronics</option>
@@ -99,13 +99,13 @@ export default function OrdersListCom1() {
             type="date"
             value={searchDate}
             onChange={e => setSearchDate(e.target.value)}
-            className="px-4 py-2 border  rounded-lg text-sm"
+            className="px-4 py-2 border  rounded-lg text-sm transition-colors duration-300"
           />
 
           <select
             value={statusFilter}
             onChange={e => setStatusFilter(e.target.value)}
-            className="px-4 py-2 border rounded-lg bg-white text-sm"
+            className="px-4 py-2 border rounded-lg bg-white dark:bg-slate-700 text-sm transition-colors duration-300"
           >
             <option value="All">Status</option>
             <option value="Delivered">Delivered</option>
@@ -114,36 +114,36 @@ export default function OrdersListCom1() {
           </select>
 
           <div className="ml-auto">
-            <button className="px-3 py-2 border rounded-lg text-sm">
+            <button className="px-3 py-2 border rounded-lg text-sm transition-colors duration-300">
               Filters
             </button>
           </div>
         </div>
 
-        <div className="border border-gray-300 rounded-lg overflow-hidden ">
-          <div className="px-6 py-4 bg-white">
-            <h3 className="font-semibold text-gray-700">Recent Orders</h3>
+        <div className="border border-gray-300 dark:border-slate-600 rounded-lg overflow-hidden  transition-colors duration-300">
+          <div className="px-6 py-4 bg-white dark:bg-slate-700 transition-colors duration-300">
+            <h3 className="font-semibold text-gray-700 dark:text-gray-300 transition-colors duration-300">Recent Orders</h3>
           </div>
 
           <div className="w-full overflow-x-auto ">
-            <table className="w-full text-sm table-auto">
-              <thead className="bg-gray-50 text-gray-500 text-xs">
+            <table className="w-full text-sm table-auto transition-colors duration-300">
+              <thead className="bg-gray-50 dark:bg-slate-800 text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">
                 <tr>
-                  <th className="p-4 w-12 text-left">
+                  <th className="p-4 w-12 text-left transition-colors duration-300">
                     <input type="checkbox" />
                   </th>
-                  <th className="p-4 text-left">Order ID</th>
-                  <th className="p-4 text-left">Customer name</th>
-                  <th className="p-4 text-left">Payment Method</th>
-                  <th className="p-4 text-left">Date</th>
-                  <th className="p-4 text-left">Status</th>
-                  <th className="p-4 text-right">Total</th>
-                  <th className="p-4 text-right">Actions</th>
+                  <th className="p-4 text-left transition-colors duration-300">Order ID</th>
+                  <th className="p-4 text-left transition-colors duration-300">Customer name</th>
+                  <th className="p-4 text-left transition-colors duration-300">Payment Method</th>
+                  <th className="p-4 text-left transition-colors duration-300">Date</th>
+                  <th className="p-4 text-left transition-colors duration-300">Status</th>
+                  <th className="p-4 text-right transition-colors duration-300">Total</th>
+                  <th className="p-4 text-right transition-colors duration-300">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
                 {visible.map(order => (
-                  <tr key={order.id} className="hover:bg-gray-50">
+                  <tr key={order.id} className="hover:bg-gray-50 dark:hover:bg-slate-800 dark:bg-slate-800 transition-colors duration-300">
                     <td className="p-3">
                       <input type="checkbox" />
                     </td>
@@ -165,25 +165,25 @@ export default function OrdersListCom1() {
                         }`}
                       >
                         <span
-                          className="w-2 h-2 rounded-full mr-2 bg-current/0"
+                          className="w-2 h-2 rounded-full mr-2 bg-current/0 transition-colors duration-300"
                           aria-hidden
                         ></span>
                         {order.status}
                       </span>
                     </td>
-                    <td className="p-3 text-right">${order.total}</td>
-                    {/* <td className="p-3 text-right">
-                      <div className="relative inline-block text-left">
-                        <button className="px-2 py-1 border rounded-md text-gray-500">
+                    <td className="p-3 text-right transition-colors duration-300">${order.total}</td>
+                    {/* <td className="p-3 text-right transition-colors duration-300">
+                      <div className="relative inline-block text-left transition-colors duration-300">
+                        <button className="px-2 py-1 border rounded-md text-gray-500 dark:text-gray-400 transition-colors duration-300">
                           ⋯
                           
                         </button>
                         
                       </div>
                     </td> */}
-                    <td className="p-3 text-right relative">
+                    <td className="p-3 text-right relative transition-colors duration-300">
                       <button
-                        className="px-2 py-1 border rounded-md text-gray-500"
+                        className="px-2 py-1 border rounded-md text-gray-500 dark:text-gray-400 transition-colors duration-300"
                         onClick={() =>
                           setOpenDropdown(
                             openDropdown === order.id ? null : order.id
@@ -207,7 +207,7 @@ export default function OrdersListCom1() {
 
                 {visible.length === 0 && (
                   <tr>
-                    <td colSpan={8} className="p-6 text-center text-gray-500">
+                    <td colSpan={8} className="p-6 text-center text-gray-500 dark:text-gray-400 transition-colors duration-300">
                       No orders found.
                     </td>
                   </tr>
@@ -217,8 +217,8 @@ export default function OrdersListCom1() {
           </div>
 
           {/* Footer / Pagination */}
-          <div className="px-6 py-4  bg-white flex items-center justify-between">
-            <div className="text-sm text-gray-500">
+          <div className="px-6 py-4  bg-white dark:bg-slate-700 flex items-center justify-between transition-colors duration-300">
+            <div className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
               Showing {(page - 1) * pageSize + 1} -{' '}
               {Math.min(page * pageSize, filtered.length)} of {filtered.length}{' '}
               orders
@@ -227,7 +227,7 @@ export default function OrdersListCom1() {
               <nav className="inline-flex -space-x-px">
                 <button
                   onClick={() => goPage(page - 1)}
-                  className="px-3 py-2 border rounded-l text-sm"
+                  className="px-3 py-2 border rounded-l text-sm transition-colors duration-300"
                   disabled={page === 1}
                 >
                   Prev
@@ -237,7 +237,7 @@ export default function OrdersListCom1() {
                     key={i}
                     onClick={() => goPage(i + 1)}
                     className={`px-3 py-2 border text-sm ${
-                      page === i + 1 ? 'bg-indigo-600 text-white' : 'bg-white'
+                      page === i + 1 ? 'bg-indigo-600 text-white' : 'bg-white dark:bg-slate-700'
                     }`}
                   >
                     {i + 1}
@@ -245,7 +245,7 @@ export default function OrdersListCom1() {
                 ))}
                 <button
                   onClick={() => goPage(page + 1)}
-                  className="px-3 py-2 border rounded-r text-sm"
+                  className="px-3 py-2 border rounded-r text-sm transition-colors duration-300"
                   disabled={page === totalPages}
                 >
                   Next

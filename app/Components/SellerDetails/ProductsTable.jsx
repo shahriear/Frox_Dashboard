@@ -23,12 +23,12 @@ const products = [
 
 export default function ProductsTable() {
   return (
-    <div className="bg-white shadow rounded-lg p-6 mt-6">
+    <div className="bg-white dark:bg-slate-700 shadow rounded-lg p-6 mt-6 transition-colors duration-300">
       <h3 className="font-bold mb-4">Products</h3>
 
-      <table className="w-full text-left">
+      <table className="w-full text-left transition-colors duration-300">
         <thead>
-          <tr className="text-gray-500 border-b">
+          <tr className="text-gray-500 dark:text-gray-400 border-b transition-colors duration-300">
             <th>Image</th>
             <th>Name</th>
             <th>Color</th>

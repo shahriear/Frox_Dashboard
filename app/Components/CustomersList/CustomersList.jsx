@@ -63,12 +63,12 @@
 //   ];
 
 //   return (
-//     <div className="mt-6 bg-white p-6 ">
-//       <h2 className="text-lg font-medium mb-4">Customers List</h2>
+//     <div className="mt-6 bg-white dark:bg-slate-700 p-6  transition-colors duration-300">
+//       <h2 className="text-lg font-medium mb-4 transition-colors duration-300">Customers List</h2>
 
-//       <table className="w-full text-left">
+//       <table className="w-full text-left transition-colors duration-300">
 //         <thead>
-//           <tr className="border-b text-gray-600">
+//           <tr className="border-b text-gray-600 dark:text-gray-300 transition-colors duration-300">
 //             <th className="p-3"></th>
 //             <th className="p-3">Name</th>
 //             <th className="p-3">E-mail</th>
@@ -120,12 +120,12 @@ export default function CustomersList() {
   const totalPages = Math.ceil(customers.length / customersPerPage);
 
   return (
-    <div className="mt-6 bg-white p-6 rounded-xl shadow border">
-      <h2 className="text-lg font-medium mb-4">Customers List</h2>
+    <div className="mt-6 bg-white dark:bg-slate-700 p-6 rounded-xl shadow border transition-colors duration-300">
+      <h2 className="text-lg font-medium mb-4 transition-colors duration-300">Customers List</h2>
 
-      <table className="w-full text-left">
+      <table className="w-full text-left transition-colors duration-300">
         <thead>
-          <tr className="border-b text-gray-600">
+          <tr className="border-b text-gray-600 dark:text-gray-300 transition-colors duration-300">
             <th className="p-3"></th>
             <th className="p-3">Name</th>
             <th className="p-3">E-mail</th>
@@ -154,7 +154,7 @@ export default function CustomersList() {
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
+          className="px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 disabled:opacity-50 transition-colors duration-300"
         >
           Prev
         </button>
@@ -163,8 +163,8 @@ export default function CustomersList() {
           <button
             key={i}
             onClick={() => setCurrentPage(i + 1)}
-            className={`px-3 py-1 border rounded hover:bg-gray-100 ${
-              currentPage === i + 1 ? "bg-gray-200 font-semibold" : ""
+            className={`px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 ${
+              currentPage === i + 1 ? "bg-gray-200 dark:bg-slate-600 font-semibold" : ""
             }`}
           >
             {i + 1}
@@ -174,7 +174,7 @@ export default function CustomersList() {
         <button
           onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-3 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
+          className="px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 disabled:opacity-50 transition-colors duration-300"
         >
           Next
         </button>

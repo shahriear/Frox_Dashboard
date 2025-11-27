@@ -19,7 +19,7 @@ export default function ReviewRow({ review, onApprove, onReply, onDelete }) {
   }, []);
 
   return (
-    <tr className="border-b border-gray-300 hover:bg-gray-50 transition">
+    <tr className="border-b border-gray-300 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-800 dark:bg-slate-800 transition">
       {/* Checkbox */}
       <td className="py-4">
         <input type="checkbox" className="cursor-pointer" />
@@ -28,38 +28,38 @@ export default function ReviewRow({ review, onApprove, onReply, onDelete }) {
       {/* Name + Email */}
       <td className="font-semibold">
         {review.name}
-        <p className="text-sm text-gray-500">{review.email}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">{review.email}</p>
       </td>
 
       {/* Comment */}
-      <td className="max-w-xs text-gray-600">{review.comment}</td>
+      <td className="max-w-xs text-gray-600 dark:text-gray-300 transition-colors duration-300">{review.comment}</td>
 
       {/* Rating using FaStar icons */}
-      <td className="flex items-center gap-1 text-yellow-500">
+      <td className="flex items-center gap-1 text-yellow-500 transition-colors duration-300">
         {Array.from({ length: review.rating }).map((_, i) => (
           <FaStar key={i} />
         ))}
       </td>
 
       {/* Date */}
-      <td className="text-gray-500">{review.date}</td>
+      <td className="text-gray-500 dark:text-gray-400 transition-colors duration-300">{review.date}</td>
 
       {/* Actions */}
       <td className="relative">
         <button
           onClick={() => setOpenMenu(!openMenu)}
-          className="p-2 rounded hover:bg-gray-100 transition"
+          className="p-2 rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition"
         >
-          <FiMoreHorizontal className="text-xl text-gray-600" />
+          <FiMoreHorizontal className="text-xl text-gray-600 dark:text-gray-300 transition-colors duration-300" />
         </button>
 
         {openMenu && (
           <div
             ref={menuRef}
-            className="absolute right-0 mt-2 bg-white shadow-lg rounded-md w-32 border animate-fadeIn z-20"
+            className="absolute right-0 mt-2 bg-white dark:bg-slate-700 shadow-lg rounded-md w-32 border animate-fadeIn z-20 transition-colors duration-300"
           >
             <button
-              className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+              className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300"
               onClick={() => {
                 onApprove?.(review);
                 setOpenMenu(false);
@@ -69,7 +69,7 @@ export default function ReviewRow({ review, onApprove, onReply, onDelete }) {
             </button>
 
             <button
-              className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+              className="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300"
               onClick={() => {
                 onReply?.(review);
                 setOpenMenu(false);
@@ -79,7 +79,7 @@ export default function ReviewRow({ review, onApprove, onReply, onDelete }) {
             </button>
 
             <button
-              className="block w-full text-left px-4 py-2 text-red-500 hover:bg-red-50"
+              className="block w-full text-left px-4 py-2 text-red-500 hover:bg-red-50 transition-colors duration-300"
               onClick={() => {
                 onDelete?.(review);
                 setOpenMenu(false);

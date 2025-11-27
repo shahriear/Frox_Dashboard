@@ -3,18 +3,18 @@ import Link from "next/link";
 export default function SummaryCard() {
   return (
     <div>
-      <div className="w-full text-right mt-6">
-      <p>Subtotal: $630.44</p>
-      <p>Tax(20%): $782.01</p>
-      <p>Discount: $293.01</p>
+      <div className="w-full text-right mt-6 transition-colors duration-300">
+      <p className="text-gray-700 dark:text-gray-300">Subtotal: $630.44</p>
+      <p className="text-gray-700 dark:text-gray-300">Tax(20%): $782.01</p>
+      <p className="text-gray-700 dark:text-gray-300">Discount: $293.01</p>
 
-      <h2 className="font-bold text-xl mt-3">Total: 310,000</h2>
+      <h2 className="font-bold text-xl mt-3 text-gray-900 dark:text-gray-100 transition-colors duration-300">Total: 310,000</h2>
 
-      <p className="text-green-500 mt-2">Status: Pending</p>
+      <p className="text-green-500 dark:text-green-400 mt-2 transition-colors duration-300">Status: Pending</p>
     </div>
     
       <Link href={'/OrdersList'}>
-        <button className=" bg-emerald-700 font-medium text-white px-4 py-2 rounded-md">Back to Order List</button>
+        <button className="bg-emerald-700 dark:bg-emerald-800 font-medium text-white px-4 py-2 rounded-md transition-colors duration-300">Back to Order List</button>
       </Link>
     </div>
   );

@@ -26,18 +26,18 @@ const data = [
 
 export default function ReviewsChart() {
   return (
-    <div className="bg-white shadow rounded-xl p-6 mt-4">
+    <div className="bg-white dark:bg-slate-700 shadow rounded-xl p-6 mt-4 transition-colors duration-300">
       {/* Top Title */}
       <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-bold">Revenue</h3>
+        <h3 className="text-xl font-bold transition-colors duration-300">Revenue</h3>
 
-        <div className="flex gap-3 text-sm">
-          <button className="px-3 py-1 rounded bg-indigo-100 text-indigo-600">
+        <div className="flex gap-3 text-sm transition-colors duration-300">
+          <button className="px-3 py-1 rounded bg-indigo-100 text-indigo-600 transition-colors duration-300">
             All
           </button>
-          <button className="px-3 py-1 rounded hover:bg-gray-100">Day</button>
-          <button className="px-3 py-1 rounded hover:bg-gray-100">Month</button>
-          <button className="px-3 py-1 rounded hover:bg-gray-100">Year</button>
+          <button className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300">Day</button>
+          <button className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300">Month</button>
+          <button className="px-3 py-1 rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300">Year</button>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export default function ReviewsChart() {
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: '#00C49F' }}
           ></span>
-          <span className="text-gray-600 text-sm">Order</span>
+          <span className="text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300">Order</span>
         </div>
 
         <div className="flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function ReviewsChart() {
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: '#FF8042' }}
           ></span>
-          <span className="text-gray-600 text-sm">Earnings</span>
+          <span className="text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300">Earnings</span>
         </div>
 
         <div className="flex items-center gap-2">
@@ -113,7 +113,7 @@ export default function ReviewsChart() {
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: '#8884d8' }}
           ></span>
-          <span className="text-gray-600 text-sm">Refunds</span>
+          <span className="text-gray-600 dark:text-gray-300 text-sm transition-colors duration-300">Refunds</span>
         </div>
       </div>
     </div>

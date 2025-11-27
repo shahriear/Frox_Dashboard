@@ -14,11 +14,11 @@ const page = () => {
   return (
     <>
 
-    <div className="p-6 space-y-6 w-full">
+    <div className="p-6 space-y-6 w-full bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
           <Breadcrumb />
     
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-semibold">Dashboard</h1>
+            <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Dashboard</h1>
             <DateRange />
           </div>
     

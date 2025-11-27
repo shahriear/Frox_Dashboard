@@ -28,14 +28,14 @@ const data = [
 
 export default function SalesPerformance() {
   return (
-    <div className="bg-white shadow rounded-xl p-4 col-span-2 h-96 min-h-[380px]">
+    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-4 col-span-2 h-96 min-h-[380px] transition-colors duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h2 className="font-semibold">Sales Performance</h2>
+        <h2 className="font-semibold dark:text-white">Sales Performance</h2>
 
-        <div className="flex gap-3 text-sm text-gray-500">
-          <span className="cursor-pointer hover:text-gray-700">Today’s</span>
-          <span className="cursor-pointer text-gray-800 font-semibold">Monthly</span>
+        <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-400">
+          <span className="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Today's</span>
+          <span className="cursor-pointer text-gray-800 dark:text-gray-100 font-semibold">Monthly</span>
         </div>
       </div>
 
