@@ -7,7 +7,7 @@ const isOpen = openMenu === customer.id;
 
 
 return (
-<tr className="border-b hover:bg-gray-50">
+<tr className="border-b hover:bg-gray-50 dark:hover:bg-slate-800 dark:bg-slate-800 transition-colors duration-300">
 <td className="p-3"><input type="checkbox" /></td>
 
 

@@ -34,19 +34,19 @@ const ProductDetails = ({ productId }) => {
   };
 
   return (
-    <div className=" w-full min-h-screen bg-gray-50 p-8">
+    <div className=" w-full min-h-screen bg-gray-50 dark:bg-slate-800 p-8 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
           {productId && (
             <button
               onClick={handleBack}
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition"
+              className="px-4 py-2 bg-gray-200 dark:bg-slate-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:bg-slate-500 transition"
             >
               ← Back
             </button>
           )}
-          <h1 className="text-3xl font-bold text-gray-900">Product Details</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 transition-colors duration-300">Product Details</h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -54,7 +54,7 @@ const ProductDetails = ({ productId }) => {
           <div className="lg:col-span-2 space-y-6">
             {/* Product Name */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-2">
+              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                 Product Name
               </label>
               <input
@@ -62,29 +62,29 @@ const ProductDetails = ({ productId }) => {
                 placeholder="Type name here"
                 value={productName}
                 onChange={e => setProductName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-700"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-700 dark:text-gray-300 transition-colors duration-300"
               />
             </div>
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-2">
+              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                 Description
               </label>
-              <div className="border border-gray-300 rounded-lg overflow-hidden">
+              <div className="border border-gray-300 dark:border-slate-600 rounded-lg overflow-hidden transition-colors duration-300">
                 {/* Rich Text Toolbar */}
-                <div className="bg-gray-100 p-3 border-b border-gray-300 flex items-center gap-2 flex-wrap">
-                  <button className="p-1.5 hover:bg-gray-200 rounded text-gray-600">
+                <div className="bg-gray-100 dark:bg-slate-700 p-3 border-b border-gray-300 dark:border-slate-600 flex items-center gap-2 flex-wrap transition-colors duration-300">
+                  <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 rounded text-gray-600 dark:text-gray-300 transition-colors duration-300">
                     <FiBold size={18} />
                   </button>
-                  <button className="p-1.5 hover:bg-gray-200 rounded text-gray-600">
+                  <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 rounded text-gray-600 dark:text-gray-300 transition-colors duration-300">
                     <FiItalic size={18} />
                   </button>
-                  <button className="p-1.5 hover:bg-gray-200 rounded text-gray-600">
+                  <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 rounded text-gray-600 dark:text-gray-300 transition-colors duration-300">
                     <FiUnderline size={18} />
                   </button>
-                  <div className="w-px h-6 bg-gray-300"></div>
-                  <button className="p-1.5 hover:bg-gray-200 rounded text-gray-600">
+                  <div className="w-px h-6 bg-gray-300 dark:bg-slate-500 transition-colors duration-300"></div>
+                  <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 rounded text-gray-600 dark:text-gray-300 transition-colors duration-300">
                     <FiList size={18} />
                   </button>
                 </div>
@@ -93,7 +93,7 @@ const ProductDetails = ({ productId }) => {
                   placeholder="Type description here"
                   value={description}
                   onChange={e => setDescription(e.target.value)}
-                  className="w-full px-4 py-3 focus:outline-none placeholder-gray-400 text-gray-700 min-h-[140px] resize-none"
+                  className="w-full px-4 py-3 focus:outline-none placeholder-gray-400 text-gray-700 dark:text-gray-300 min-h-[140px] resize-none transition-colors duration-300"
                 />
               </div>
             </div>
@@ -101,25 +101,25 @@ const ProductDetails = ({ productId }) => {
             {/* SKU and Stock Quantity */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                   SKU
                 </label>
                 <input
                   type="text"
                   value={sku}
                   onChange={e => setSku(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                   Stock quantity
                 </label>
                 <input
                   type="text"
                   value={stockQuantity}
                   onChange={e => setStockQuantity(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
             </div>
@@ -127,24 +127,24 @@ const ProductDetails = ({ productId }) => {
             {/* Price and Status */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                   Price
                 </label>
                 <input
                   type="text"
                   value={price}
                   onChange={e => setPrice(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-2">
+                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
                   Status
                 </label>
                 <select
                   value={status}
                   onChange={e => setStatus(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 bg-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 dark:text-gray-300 bg-white dark:bg-slate-700 transition-colors duration-300"
                 >
                   <option value="Active">Active</option>
                   <option value="Inactive">Inactive</option>
@@ -157,10 +157,10 @@ const ProductDetails = ({ productId }) => {
           <div className="lg:col-span-1 space-y-6">
             {/* Product Image Preview */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-3">
+              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 transition-colors duration-300">
                 Product Image
               </label>
-              <div className="w-full aspect-square bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 overflow-hidden">
+              <div className="w-full aspect-square bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-slate-600 overflow-hidden transition-colors duration-300">
                 {product.image ? (
                   <Image
                     src={product.image}
@@ -170,23 +170,23 @@ const ProductDetails = ({ productId }) => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <span className="text-gray-400">No Image</span>
+                  <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300">No Image</span>
                 )}
               </div>
             </div>
 
             {/* Product Gallery */}
             <div>
-              <h3 className="text-sm font-medium text-gray-900 mb-3">
+              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 transition-colors duration-300">
                 Product Gallery
               </h3>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+              <div className="border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-lg p-6 text-center transition-colors duration-300">
                 <div className="flex flex-col items-center justify-center gap-2">
-                  <FiImage size={32} className="text-gray-400" />
-                  <p className="text-sm text-gray-500">
+                  <FiImage size={32} className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300" />
+                  <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                     Drop your image here, or browse
                   </p>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300">
                     JPG, PNG and GIF files are allowed
                   </p>
                 </div>
@@ -198,7 +198,7 @@ const ProductDetails = ({ productId }) => {
               {uploadedImages.map((image, index) => (
                 <div key={index} className="flex items-center gap-3">
                   {/* Image Thumbnail */}
-                  <div className="w-12 h-12 bg-gray-200 rounded shrink-0 flex items-center justify-center overflow-hidden">
+                  <div className="w-12 h-12 bg-gray-200 dark:bg-slate-600 rounded shrink-0 flex items-center justify-center overflow-hidden transition-colors duration-300">
                     {image.image ? (
                       <Image
                         src={image.image}
@@ -208,14 +208,14 @@ const ProductDetails = ({ productId }) => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <span className="text-gray-400 text-xs">No Img</span>
+                      <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">No Img</span>
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-700 truncate">
+                    <p className="text-sm text-gray-700 dark:text-gray-300 truncate transition-colors duration-300">
                       {image.name}
                     </p>
-                    <div className="w-full bg-gray-300 rounded-full h-1.5 mt-1">
+                    <div className="w-full bg-gray-300 dark:bg-slate-500 rounded-full h-1.5 mt-1 transition-colors duration-300">
                       <div
                         className={`h-full rounded-full ${
                           image.progress === 100
@@ -228,12 +228,12 @@ const ProductDetails = ({ productId }) => {
                       ></div>
                     </div>
                   </div>
-                  <span className="text-sm text-gray-600 shrink-0">
+                  <span className="text-sm text-gray-600 dark:text-gray-300 shrink-0 transition-colors duration-300">
                     {image.progress}%
                   </span>
                   <button
                     onClick={() => handleRemoveImage(index)}
-                    className="text-red-500 hover:text-red-700 shrink-0"
+                    className="text-red-500 hover:text-red-700 shrink-0 transition-colors duration-300"
                   >
                     <MdClose size={20} />
                   </button>
@@ -247,7 +247,7 @@ const ProductDetails = ({ productId }) => {
         <div className="flex gap-4 justify-end mt-8">
           <button
             onClick={productId ? handleBack : undefined}
-            className="px-6 py-2.5 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition"
+            className="px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 transition"
           >
             {productId ? 'Cancel' : 'Cancel'}
           </button>

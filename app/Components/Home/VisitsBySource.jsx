@@ -55,7 +55,7 @@ const COLORS = ["#4F46E5", "#06B6D4", "#10B981", "#F59E0B"];
 
 export default function VisitsBySource() {
   return (
-    <div className="bg-white shadow-2xl rounded-xl p-4 h-72 min-h-[280px]">
+    <div className="bg-white dark:bg-slate-800 shadow-2xl dark:shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
       <h2 className="font-semibold mb-4">Visits by Source</h2>
 
       {/* FIX: Wrapper with fixed height so responsive container works */}

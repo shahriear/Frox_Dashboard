@@ -6,7 +6,7 @@ export default function Pagination() {
           <button
             key={n}
             className={`px-3 py-1 rounded ${
-              n === 1 ? 'bg-indigo-600 text-white' : 'bg-gray-100'
+              n === 1 ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-slate-700'
             }`}
           >
             {n}

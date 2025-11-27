@@ -1,17 +1,17 @@
 export default function SellerInfo() {
   return (
-    <div className="bg-white shadow rounded-lg p-6 w-full ">
-      <div className="flex flex-col items-center text-center">
+    <div className="bg-white dark:bg-slate-700 shadow rounded-lg p-6 w-full  transition-colors duration-300">
+      <div className="flex flex-col items-center text-center transition-colors duration-300">
         <img
           src="/photos/pic.png"
           className="w-24 h-24 rounded-full object-cover"
           alt="Seller"
         />
-        <h2 className="text-xl font-bold mt-4">FoxMedia_JSC</h2>
-        <p className="text-sm text-gray-500">Since 2012</p>
+        <h2 className="text-xl font-bold mt-4 transition-colors duration-300">FoxMedia_JSC</h2>
+        <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">Since 2012</p>
       </div>
 
-      <div className="mt-6 text-sm space-y-2">
+      <div className="mt-6 text-sm space-y-2 transition-colors duration-300">
         <p>
           <strong>Owner Name:</strong> Johnson Mark
         </p>

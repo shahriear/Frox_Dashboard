@@ -8,30 +8,30 @@ const products = [
 export default function ProductTable() {
   return (
     <div className="mt-8">
-      <h3 className="font-semibold mb-4 text-lg">Products</h3>
+      <h3 className="font-semibold mb-4 text-lg text-gray-900 dark:text-gray-100 transition-colors duration-300">Products</h3>
 
-      <table className="w-full text-left">
+      <table className="w-full text-left bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm transition-colors duration-300">
         <thead>
-          <tr className="border-b">
-            <th></th>
-            <th>Product Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
+          <tr className="border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-700 transition-colors duration-300">
+            <th className="text-gray-700 dark:text-gray-300"></th>
+            <th className="text-gray-700 dark:text-gray-300 p-3">Product Name</th>
+            <th className="text-gray-700 dark:text-gray-300 p-3">Price</th>
+            <th className="text-gray-700 dark:text-gray-300 p-3">Quantity</th>
+            <th className="text-gray-700 dark:text-gray-300 p-3">Total</th>
           </tr>
         </thead>
 
         <tbody>
           {products.map((p, i) => (
-            <tr key={i} className="border-b">
-              <td><input type="checkbox" /></td>
-              <td className="py-3 flex items-center gap-3">
+            <tr key={i} className="border-b border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-300">
+              <td className="p-3"><input type="checkbox" /></td>
+              <td className="py-3 px-3 flex items-center gap-3 text-gray-900 dark:text-gray-100">
                 <img src={p.img} className="w-10 h-10 rounded" />
                 {p.name}
               </td>
-              <td>${p.price}</td>
-              <td>{p.qty}</td>
-              <td>${p.total}</td>
+              <td className="px-3 text-gray-900 dark:text-gray-100">${p.price}</td>
+              <td className="px-3 text-gray-900 dark:text-gray-100">{p.qty}</td>
+              <td className="px-3 text-gray-900 dark:text-gray-100">${p.total}</td>
             </tr>
           ))}
         </tbody>

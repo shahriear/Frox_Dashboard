@@ -8,7 +8,7 @@ export default function StatusBadge({ status }) {
   return (
     <div className="flex items-center gap-2">
       <span className={`w-2 h-2 rounded-full ${color}`}></span>
-      <span className="text-sm">{status}</span>
+      <span className="text-sm transition-colors duration-300">{status}</span>
     </div>
   );
 }
