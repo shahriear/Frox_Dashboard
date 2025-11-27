@@ -8,7 +8,7 @@ const page = () => {
     <div className='pl-5 bg-gray-50 dark:bg-slate-900 transition-colors duration-300'>
             <h2 className="text-2xl font-bold pt-4 text-gray-900 dark:text-gray-100">Orders List</h2>
             <nav className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-              Home &gt; <span className="text-indigo-600 dark:text-indigo-400">Order List</span>
+              Homee &gt; <span className="text-indigo-600 dark:text-indigo-400">Order List</span>
             </nav>
           </div>
 
@@ -17,7 +17,7 @@ const page = () => {
       </div> */}
       <FilterBar/>
     <CustomersList/>
-      
+      <h1></h1>
     </>
   )
 }
