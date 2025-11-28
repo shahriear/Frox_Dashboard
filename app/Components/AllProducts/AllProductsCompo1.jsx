@@ -25,9 +25,9 @@ const AllProductsCompo1 = () => {
   // If grid view is selected, render the grid component
   if (viewMode === 'grid') { 
     return (
-      <div className="w-full bg-gray-100 border border-gray-300 p-6">
+      <div className="w-full bg-gray- border border-gray-300 p-6">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">All Products</h1>
+          <h1 className="text-2xl font-bold text-gray-">All Products</h1>
           <div className="flex gap-3">
             <button
               onClick={() => setViewMode('list')}
@@ -62,10 +62,10 @@ const AllProductsCompo1 = () => {
   }
 
   return (
-    <div className="w-full bg-gray-100 border border-gray-300 p-6">
+    <div className="w-full bg-gray- border border-gray-300 p-6">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">All Products</h1>
+        <h1 className="text-2xl font-bold text-gray-">All Products</h1>
         <div className="flex gap-3">
           <button
             onClick={() => setViewMode('list')}
@@ -91,77 +91,77 @@ const AllProductsCompo1 = () => {
       </div>
 
       {/* Table Container */}
-      <div className="bg-white rounded-lg shadow-sm overflow-x-auto">
+      <div className="bg-whit rounded-lg shadow-sm overflow-x-auto">
         <table className="w-full min-w-max">
           {/* Table Header */}
           <thead>
-            <tr className="border-b border-gray-300 bg-gray-50">
+            <tr className="border-b  border-gray-300 bg-gray-">
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Image
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Name
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     SKU
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Price
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Status
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     QTY
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Rating
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
+                  <span className="text-sm font-semibold text-gray-00">
                     Sales
                   </span>
-                  <FiChevronDown size={16} className="text-gray-400" />
+                  <FiChevronDown size={16} className="text-gray-00" />
                 </div>
               </th>
               <th className="px-6 py-4 text-center">
-                <span className="text-sm font-semibold text-gray-700">•••</span>
+                <span className="text-sm font-semibold text-gray-00">•••</span>
               </th>
             </tr>
           </thead>
@@ -171,13 +171,13 @@ const AllProductsCompo1 = () => {
             {products.map((product, index) => (
               <tr
                 key={product.id}
-                className={`border-b border-gray-100 hover:bg-gray-300 transition-colors ${
-                  index % 2 === 0 ? 'bg-white' : 'bg-gray-100'
+                className={`border-b border-gray-100 hover:bg-gray-500 transition-colors ${
+                  index % 2 === 0 ? 'bg-whit' : 'bg-gray-10'
                 }`}
               >
                 {/* Image Column */}
                 <td className="px-6 py-4">
-                  <div className="w-14 h-14 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+                  <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
                     {product.image ? (
                       <Image
                         src={product.image}
@@ -198,10 +198,10 @@ const AllProductsCompo1 = () => {
                     onClick={() => router.push(`/ProductDetails/${product.id}`)}
                     className="cursor-pointer hover:opacity-70 transition-opacity"
                   >
-                    <p className="text-sm font-semibold text-gray-900">
+                    <p className="text-sm font-semibold text-gray-00">
                       {product.name}
                     </p>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-00 mt-1">
                       {product.description}
                     </p>
                   </div>
@@ -209,12 +209,12 @@ const AllProductsCompo1 = () => {
 
                 {/* SKU Column */}
                 <td className="px-6 py-4">
-                  <span className="text-sm text-gray-700">{product.sku}</span>
+                  <span className="text-sm text-gray-00">{product.sku}</span>
                 </td>
 
                 {/* Price Column */}
                 <td className="px-6 py-4">
-                  <span className="text-sm font-semibold text-gray-900">
+                  <span className="text-sm font-semibold text-gray-00">
                     {product.price}
                   </span>
                 </td>
@@ -223,7 +223,7 @@ const AllProductsCompo1 = () => {
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-2">
                     <span className="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
-                    <span className="text-sm text-gray-700">
+                    <span className="text-sm text-gray-00">
                       {product.status}
                     </span>
                   </div>
@@ -231,7 +231,7 @@ const AllProductsCompo1 = () => {
 
                 {/* QTY Column */}
                 <td className="px-6 py-4">
-                  <span className="text-sm text-gray-700">{product.qty}</span>
+                  <span className="text-sm text-gray-00">{product.qty}</span>
                 </td>
 
                 {/* Rating Column */}
@@ -239,12 +239,12 @@ const AllProductsCompo1 = () => {
 
                 {/* Sales Column */}
                 <td className="px-6 py-4">
-                  <span className="text-sm text-gray-700">{product.sales}</span>
+                  <span className="text-sm text-gray-00">{product.sales}</span>
                 </td>
 
                 {/* Actions Column */}
                 <td className="px-6 py-4 text-center">
-                  <button className="text-gray-400 hover:text-gray-600 text-lg">
+                  <button className="text-gray-00 hover:text-gray-00 text-lg">
                     •••
                   </button>
                 </td>

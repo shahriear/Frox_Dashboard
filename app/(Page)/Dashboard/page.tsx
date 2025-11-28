@@ -14,7 +14,7 @@ const page = () => {
   return (
     <>
 
-    <div className="p-6 space-y-6 w-full bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+    <div className="p-6 space-y-6 w-full bg-gray- dark:bg-slate- transition-colors duration-300">
           <Breadcrumb />
     
           <div className="flex justify-between items-center">
