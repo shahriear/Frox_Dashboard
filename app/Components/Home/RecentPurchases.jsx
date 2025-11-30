@@ -53,14 +53,18 @@ export default function RecentPurchases() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 transition-colors duration-300">
-      <h2 className="font-semibold mb-4 text-lg dark:text-white">Recent Purchases</h2>
+    <div className="bg-[var(--card-bg)] shadow rounded-xl p-6 transition-colors duration-300">
+      <h2 className="font-semibold mb-4 text-lg dark:text-whit">
+        Recent Purchases
+      </h2>
 
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="text-gray-500 dark:text-gray-400 text-sm border-b border-gray-400 dark:border-gray-700">
-              <th className="p-3"><input type="checkbox" /></th>
+              <th className="p-3">
+                <input type="checkbox" />
+              </th>
               <th className="p-3">Product</th>
               <th className="p-3">Order ID</th>
               <th className="p-3">Date</th>
@@ -72,8 +76,11 @@ export default function RecentPurchases() {
           </thead>
 
           <tbody>
-            {data.map((item) => (
-              <tr key={item.id} className="border-b border-gray-300 dark:border-gray-700 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+            {data.map(item => (
+              <tr
+                key={item.id}
+                className="border-b border-gray-300 dark:border-gray-700 text-sm hover:bg-gray-0 dark:hover:bg-gray-500 transition-colors"
+              >
                 <td className="p-3">
                   <input type="checkbox" />
                 </td>
@@ -118,7 +125,6 @@ export default function RecentPurchases() {
                     <MoreHorizontal className="text-gray-600 dark:text-gray-400" />
                   </button>
                 </td>
-
               </tr>
             ))}
           </tbody>

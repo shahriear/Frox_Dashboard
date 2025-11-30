@@ -28,14 +28,18 @@ const data = [
 
 export default function SalesPerformance() {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-4 col-span-2 h-96 min-h-[380px] transition-colors duration-300">
+    <div className=" bg-[var(--card-bg)] shadow rounded-xl p-4 col-span-2 h-96 min-h-[380px] transition-colors duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
-        <h2 className="font-semibold dark:text-white">Sales Performance</h2>
+        <h2 className="font-semibold dark:text-whit">Sales Performance</h2>
 
-        <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-400">
-          <span className="cursor-pointer hover:text-gray-700 dark:hover:text-gray-300">Today's</span>
-          <span className="cursor-pointer text-gray-800 dark:text-gray-100 font-semibold">Monthly</span>
+        <div className="flex gap-3 text-sm text-gray-00 dark:text-gray-00">
+          <span className="cursor-pointer hover:text-gray-00 dark:hover:text-gray-30">
+            Today's
+          </span>
+          <span className="cursor-pointer text-gray-00 dark:text-gray-00 font-semibold">
+            Monthly
+          </span>
         </div>
       </div>
 
@@ -49,10 +53,30 @@ export default function SalesPerformance() {
             <Tooltip />
             <Legend />
 
-            <Line type="monotone" dataKey="Completed" stroke="#FF6B6B" strokeWidth={3} />
-            <Line type="monotone" dataKey="Pending" stroke="#845EC2" strokeWidth={3} />
-            <Line type="monotone" dataKey="Unpaid" stroke="#FFC75F" strokeWidth={3} />
-            <Line type="monotone" dataKey="Delivered" stroke="#4D96FF" strokeWidth={3} />
+            <Line
+              type="monotone"
+              dataKey="Completed"
+              stroke="#E0A8A8"
+              strokeWidth={3}
+            />
+            <Line
+              type="monotone"
+              dataKey="Pending"
+              stroke="#845EC2"
+              strokeWidth={3}
+            />
+            <Line
+              type="monotone"
+              dataKey="Unpaid"
+              stroke="#FFC75F"
+              strokeWidth={3}
+            />
+            <Line
+              type="monotone"
+              dataKey="Delivered"
+              stroke="#4D96FF"
+              strokeWidth={3}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>

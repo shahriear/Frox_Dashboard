@@ -53,8 +53,8 @@ const data = [
 
 export default function TotalRevenue() {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
-      <h2 className="font-semibold dark:text-white mb-4">Total Revenue</h2>
+    <div className="bg-[var(--card-bg)] shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
+      <h2 className="font-semibold  mb-4">Total Revenue</h2>
 
       {/* FIX: wrapper for responsive height */}
       <div className="w-full h-[220px]">
@@ -65,11 +65,7 @@ export default function TotalRevenue() {
             <YAxis />
             <Tooltip />
 
-            <Bar
-              dataKey="revenue"
-              fill="#10B981"
-              radius={[6, 6, 0, 0]}
-            />
+            <Bar dataKey="revenue" fill="#10B981" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

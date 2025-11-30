@@ -1,6 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -8,7 +8,32 @@
 html.dark {
   --background: #1a1a1a;
   --foreground: #ededed;
+} */
+/* Default Light Mode */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Custom BG for any section */
+  --section-bg: #eaeeed;
+  --card-bg: #dededeba;
+  --row-bg:#667dab35;
+  /* --sidebar-bg: #f8fafc; */
 }
+
+/* Dark Mode */
+html.dark {
+  --background: #0b0f19;
+  --foreground: #bfbebe;
+
+  /* Custom BG for any section (dark) */
+  --section-bg: #0b1a2e;
+  --card-bg: #14273d;
+  /* --sidebar-bg: #0d1829; */
+  --row-bg:#6e9bf635;
+}
+
+/* Tailwind inline theme */
 
 @theme inline {
   --color-background: var(--background);
@@ -55,20 +80,15 @@ html.dark {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .animate-fadeIn {
   animation: fadeIn 0.35s ease-out;
 }
-
-
-
-
-
-
-
-
-
-
-

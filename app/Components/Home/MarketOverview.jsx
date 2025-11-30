@@ -21,8 +21,8 @@ const data = [
 
 export default function MarketOverview() {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
-      <h2 className="font-semibold mb-4 dark:text-white">Market Overview</h2>
+    <div className="bg-[var(--card-bg)] shadow-2xl rounded-xl p-4 h-72 min-h-[280px] transition-colors duration-300">
+      <h2 className="font-semibold mb-4 dark:text-whit">Market Overview</h2>
 
       {/* FIX: Make a fixed-height wrapper */}
       <div className="w-full h-[220px]">

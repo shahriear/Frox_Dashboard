@@ -34,14 +34,14 @@ export default function BestSellers() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-4 h-full transition-colors duration-300">
+    <div className="bg-[var(--card-bg)] dark:bg-gray-00 shadow rounded-xl p-4 h-full transition-colors duration-300">
       {/* Top Section */}
       <div className="flex justify-between items-center mb-4 relative">
-        <h2 className="font-semibold text-lg dark:text-white">Best Sellers</h2>
+        <h2 className="font-semibold text-lg dark:text-whit">Best Sellers</h2>
 
         <button
           onClick={() => setOpenMenu(!openMenu)}
-          className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors"
+          className="p-2 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-full transition-colors"
         >
           <MoreVertical size={20} />
         </button>
@@ -72,10 +72,10 @@ export default function BestSellers() {
 
       {/* Sellers List */}
       <div className="space-y-4">
-        {sellers.map((seller) => (
+        {sellers.map(seller => (
           <div
             key={seller.id}
-            className="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-3 rounded-xl transition-colors"
+            className="flex items-center justify-between bg-[var(--row-bg)]  dark:bg-gray-00 p-3 rounded-xl transition-colors"
           >
             <div className="flex items-center gap-3">
               <Image
@@ -86,11 +86,12 @@ export default function BestSellers() {
                 className="rounded-full"
               />
               <div>
-                <p className="font-medium text-sm dark:text-white">{seller.name}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="font-medium text-sm dark:text-whit">
+                  {seller.name}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-00">
                   Category: {seller.category}
                 </p>
-                
               </div>
             </div>
 
@@ -98,7 +99,9 @@ export default function BestSellers() {
               <span className="text-green-600 dark:text-green-400 font-semibold">
                 ${seller.sales.toLocaleString()}
               </span>
-              <p className="text-xs font-medium text-gray-500">{seller.soldCount} Sales </p>
+              <p className="text-xs font-medium text-gray-500">
+                {seller.soldCount} Sales{' '}
+              </p>
             </div>
           </div>
         ))}
