@@ -2,7 +2,7 @@
 
 export default function FilterBar() {
   return (
-    <div className="flex items-center flex-wrap gap-4 bg-white dark:bg-slate-700 p-4 rounded-lg shadow-sm mb-6 transition-colors duration-300">
+    <div className="flex items-center flex-wrap gap-4 bg-whit dark:bg-slate-00 p-4 rounded-lg shadow-sm mb-6 transition-colors duration-300">
       
       <select className="border p-2 rounded-md min-w-[150px]">
         <option>All Category</option>
@@ -10,7 +10,7 @@ export default function FilterBar() {
         <option>Pending</option>
       </select>
 
-      <div>
+      <div className="flex gap-5">
         <input 
         type="date"
         className="border p-2 rounded-md"
@@ -28,8 +28,8 @@ export default function FilterBar() {
       </button>
       </div>
 
-      <div className="ml-auto text-gray-600 dark:text-gray-300 transition-colors duration-300">
-        <span>📅 Feb 15, 2022 – Feb 21, 2022</span>
+      <div className="ml-auto text-gray-00 dark:text-gray-00 transition-colors duration-300 shadow">
+        <span> Feb 15, 2022 – Feb 21, 2022</span>
       </div>
     </div>
   );

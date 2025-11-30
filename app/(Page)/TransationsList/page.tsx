@@ -41,7 +41,7 @@ const page = () => {
     {/* <div className="w-full h-screen bg-amber-600 flex justify-center items-center md:text-5xl text-sm font-bold ">
       <h1>Traqnsation List page</h1>
     </div> */}
-    <div className="p-6 bg-gray-50 dark:bg-slate-900 transition-colors duration-300 ">
+    <div className="p-6 bg-gray-0 dark:bg-slate-00 transition-colors duration-300 ">
 
       <PageHeader />
       <FilterBar />

@@ -70,16 +70,16 @@ export default function DropdownMenu() {
     <div className="relative" ref={ref}>
       <button
         onClick={toggle}
-        className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 rounded-full transition-colors duration-300"
+        className="p-2 hover:bg-gray-0 dark:hover:bg-slate-00 dark:bg-slate-00 rounded-full transition-colors duration-300"
       >
         ⋮
       </button>
 
       {open && (
-        <div className="absolute right-0 top-8 bg-white dark:bg-slate-700 shadow-lg rounded-lg p-2 w-40 text-sm z-50 transition-colors duration-300">
-          <p className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 rounded cursor-pointer transition-colors duration-300">View details</p>
-          <p className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 rounded cursor-pointer transition-colors duration-300">Edit transaction</p>
-          <p className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 rounded cursor-pointer transition-colors duration-300">Completed</p>
+        <div className="absolute right-0 top-8 text-black  bg-gray-200 border dark:bg-slate-00 shadow-lg rounded-lg p-2 w-40 text-sm z-50 transition-colors duration-300">
+          <p className="p-2 hover:bg-gray-100 hover:text-white dark:hover:bg-slate-700 dark:bg-slate-00 rounded cursor-pointer transition-colors duration-300">View details</p>
+          <p className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-00 rounded cursor-pointer transition-colors duration-300 hover:text-white">Edit transaction</p>
+          <p className="p-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-00 rounded cursor-pointer transition-colors duration-300 hover:text-white">Completed</p>
           <p className="p-2 hover:bg-red-100 text-red-600 rounded cursor-pointer transition-colors duration-300">Cancel</p>
         </div>
       )}
