@@ -120,12 +120,12 @@ export default function CustomersList() {
   const totalPages = Math.ceil(customers.length / customersPerPage);
 
   return (
-    <div className="mt-6 bg-white dark:bg-slate-700 p-6 rounded-xl shadow border transition-colors duration-300">
+    <div className="mt-6 bg-whit dark:bg-slate-00 p-6 rounded-xl shadow border transition-colors duration-300">
       <h2 className="text-lg font-medium mb-4 transition-colors duration-300">Customers List</h2>
 
       <table className="w-full text-left transition-colors duration-300">
         <thead>
-          <tr className="border-b text-gray-600 dark:text-gray-300 transition-colors duration-300">
+          <tr className="border-b text-gray-00 dark:text-gray-00 transition-colors duration-300">
             <th className="p-3"></th>
             <th className="p-3">Name</th>
             <th className="p-3">E-mail</th>
@@ -154,7 +154,7 @@ export default function CustomersList() {
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 disabled:opacity-50 transition-colors duration-300"
+          className="px-3 py-1 border rounded hover:bg-gray-00 dark:hover:bg-slate-700 dark:bg-slate-00 disabled:opacity-50 transition-colors duration-300"
         >
           Prev
         </button>
@@ -164,7 +164,7 @@ export default function CustomersList() {
             key={i}
             onClick={() => setCurrentPage(i + 1)}
             className={`px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 ${
-              currentPage === i + 1 ? "bg-gray-200 dark:bg-slate-600 font-semibold" : ""
+              currentPage === i + 1 ? "bg-gray-200 dark:bg-slate-00 font-semibold" : ""
             }`}
           >
             {i + 1}

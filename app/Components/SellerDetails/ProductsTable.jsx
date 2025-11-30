@@ -23,7 +23,7 @@ const products = [
 
 export default function ProductsTable() {
   return (
-    <div className="bg-white dark:bg-slate-700 shadow rounded-lg p-6 mt-6 transition-colors duration-300">
+    <div className="bg-white text-white dark:bg-slate-700 shadow rounded-lg p-6 mt-6 transition-colors duration-300">
       <h3 className="font-bold mb-4">Products</h3>
 
       <table className="w-full text-left transition-colors duration-300">

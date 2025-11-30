@@ -26,10 +26,10 @@ const data = [
 
 export default function ReviewsChart() {
   return (
-    <div className="bg-white dark:bg-slate-700 shadow rounded-xl p-6 mt-4 transition-colors duration-300">
+    <div className="bg-white dark:bg-slate-600 shadow rounded-xl p-6 mt-4 transition-colors duration-300">
       {/* Top Title */}
       <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-bold transition-colors duration-300">Revenue</h3>
+        <h3 className="text-xl text-white font-bold transition-colors duration-300">Revenue</h3>
 
         <div className="flex gap-3 text-sm transition-colors duration-300">
           <button className="px-3 py-1 rounded bg-indigo-100 text-indigo-600 transition-colors duration-300">

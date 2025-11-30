@@ -5,10 +5,10 @@ import React from 'react'
 const page = () => {
   return (
     <>
-    <div className='pl-5 bg-gray-50 dark:bg-slate-900 transition-colors duration-300'>
-            <h2 className="text-2xl font-bold pt-4 text-gray-900 dark:text-gray-100">Orders List</h2>
-            <nav className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-              Homee &gt; <span className="text-indigo-600 dark:text-indigo-400">Order List</span>
+    <div className='pl-5 bg-gray- dark:bg-slate-00 transition-colors duration-300'>
+            <h2 className="text-2xl font-bold pt-4 text-gray-00 dark:text-gray-00">Orders List</h2>
+            <nav className="text-[14px] text-gray-00 dark:text-gray-00 mt-1">
+              Home &gt; <span className="text-blue-500 dark:text-indigo-400 font-medium">Order List</span>
             </nav>
           </div>
 

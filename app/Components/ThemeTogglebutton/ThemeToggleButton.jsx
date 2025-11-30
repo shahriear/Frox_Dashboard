@@ -1,48 +1,9 @@
-// 'use client'
-
-// import { useTheme } from 'next-themes'
-// import { useEffect, useState } from 'react'
-// import { IoMoonOutline } from 'react-icons/io5'
-// import { MdWbSunny } from 'react-icons/md'
-
-// export default function ThemeToggleButton() {
-//   const { theme, setTheme } = useTheme()
-//   const [mounted, setMounted] = useState(false)
-
-//   // Prevent hydration mismatch
-//   useEffect(() => {
-//     setMounted(true)
-//   }, [])
-
-//   if (!mounted) return null
-
-//   return (
-//     <button
-//       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-//       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 w-full"
-//       aria-label="Toggle theme"
-//     >
-//       {theme === 'dark' ? (
-//         <>
-//           <MdWbSunny className="text-lg" />
-//           <span className="text-sm font-medium">Light Mode</span>
-//         </>
-//       ) : (
-//         <>
-//           <IoMoonOutline className="text-lg" />
-//           <span className="text-sm font-medium">Dark Mode</span>
-//         </>
-//       )}
-//     </button>
-//   )
-// }
-
 'use client';
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { IoMoonOutline } from 'react-icons/io5';
-import { MdWbSunny } from 'react-icons/md';
+import { IoMoon } from 'react-icons/io5';
+import { MdOutlineWbSunny } from 'react-icons/md';
 
 export default function ThemeToggleButton() {
   const { theme, setTheme } = useTheme();
@@ -56,29 +17,50 @@ export default function ThemeToggleButton() {
 
   const isDark = theme === 'dark';
 
+  const toggleTheme = () => {
+    setTheme(isDark ? 'light' : 'dark');
+  };
+
   return (
-    <button
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      aria-label="Toggle theme"
-      className="
-        flex items-center gap-2 px-4 py-2 rounded-lg 
-        bg-gray-100 dark:bg-gray-800 
-        text-gray-900 dark:text-gray-100 
-        hover:bg-gray-200 dark:hover:bg-gray-700 
-        transition-colors duration-300 w-full
-      "
-    >
-      {isDark ? (
-        <>
-          <MdWbSunny className="text-lg" />
-          <span className="text-sm font-medium">Light Mode</span>
-        </>
-      ) : (
-        <>
-          <IoMoonOutline className="text-lg" />
-          <span className="text-sm font-medium">Dark Mode</span>
-        </>
-      )}
-    </button>
+    <div className="flex items-center gap-4 justify-center ">
+
+      {/* Moon icon (Gray) */}
+      <IoMoon
+        size={22}
+        className="text-gray-00 dark:text-gray-00 transition-colors"
+      />
+
+      {/* Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        aria-label="Toggle Theme"
+        className={`
+          w-12 h-6 rounded-full flex items-center px-1 transition-all
+          ${isDark
+            ? 'bg-gradient-to-r from-purple-500 to-purple-700'
+            : 'bg-gray-400'}
+        `}
+      >
+        <div
+          className={`
+            w-5 h-5 bg-white rounded-full shadow-md transform transition-all
+            ${isDark ? 'translate-x-6' : 'translate-x-0'}
+          `}
+        />
+      </button>
+
+      {/* Sun icon (Orange / Yellow hover) */}
+      <MdOutlineWbSunny
+        size={22}
+        className="
+          text-gray-00 
+          hover:text-orange-500 
+          dark:text-amber-500
+          dark:hover:text-yellow-400 
+          transition-colors
+        "
+      />
+
+    </div>
   );
 }

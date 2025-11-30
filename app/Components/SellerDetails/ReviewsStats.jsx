@@ -44,7 +44,7 @@
 
 export default function ReviewsStats() {
   return (
-    <div className="bg-white dark:bg-slate-700 shadow rounded-xl p-6 transition-colors duration-300">
+    <div className="bg-white text-black dark:bg-slate-400 shadow rounded-xl p-6 transition-colors duration-300">
       {/* Title */}
       <h3 className="font-semibold mb-3 text-lg transition-colors duration-300">Customer Reviews</h3>
 
@@ -63,7 +63,7 @@ export default function ReviewsStats() {
       <div className="space-y-3">
         {/* 5 star */}
         <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">5 star</span>
+          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">5 star</span>
           <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
             <div
               className="bg-purple-600 h-2 rounded transition-colors duration-300"
@@ -74,7 +74,7 @@ export default function ReviewsStats() {
 
         {/* 4 star */}
         <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">4 star</span>
+          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">4 star</span>
           <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
             <div
               className="bg-green-400 h-2 rounded transition-colors duration-300"
@@ -85,7 +85,7 @@ export default function ReviewsStats() {
 
         {/* 3 star */}
         <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">3 star</span>
+          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">3 star</span>
           <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
             <div
               className="bg-blue-400 h-2 rounded transition-colors duration-300"
@@ -96,7 +96,7 @@ export default function ReviewsStats() {
 
         {/* 2 star */}
         <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">2 star</span>
+          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">2 star</span>
           <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
             <div
               className="bg-orange-400 h-2 rounded transition-colors duration-300"
@@ -107,7 +107,7 @@ export default function ReviewsStats() {
 
         {/* 1 star */}
         <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">1 star</span>
+          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">1 star</span>
           <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
             <div
               className="bg-red-400 h-2 rounded transition-colors duration-300"
