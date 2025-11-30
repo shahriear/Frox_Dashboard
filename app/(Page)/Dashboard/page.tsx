@@ -18,7 +18,7 @@ const page = () => {
           <Breadcrumb />
     
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Dashboard</h1>
+            <h1 className="text-2xl font-semibold text-gray-00 dark:text-gray-00">Dashboard</h1>
             <DateRange />
           </div>
     
