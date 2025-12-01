@@ -1,6 +1,6 @@
 export default function PaymentInfo() {
   return (
-    <div className="p-5 border rounded-lg">
+    <div className="p-5 bg-[var(--card-bg)] border rounded-lg">
       <h3 className="font-semibold mb-3">Payment info</h3>
 
       <p>💳 Master Card **** 6557</p>
