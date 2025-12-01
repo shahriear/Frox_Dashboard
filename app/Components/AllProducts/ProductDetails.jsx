@@ -34,19 +34,19 @@ const ProductDetails = ({ productId }) => {
   };
 
   return (
-    <div className=" w-full min-h-screen bg-gray-50 dark:bg-slate-800 p-8 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
+    <div className=" w-full min-h-screen bg-gray-0 dark:bg-slate-00 p-8 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto bg-[var(--section-bg)] p-5">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
           {productId && (
             <button
               onClick={handleBack}
-              className="px-4 py-2 bg-gray-200 dark:bg-slate-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:bg-slate-500 transition"
+              className="px-4 py-2 bg-gray-200 dark:bg-slate-800 text-white rounded-lg font-medium hover:bg-gray-300 dark:bg-slate-500 transition"
             >
               ← Back
             </button>
           )}
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 transition-colors duration-300">Product Details</h1>
+          <h1 className="text-3xl font-bold transition-colors duration-300">Product Details</h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -54,7 +54,7 @@ const ProductDetails = ({ productId }) => {
           <div className="lg:col-span-2 space-y-6">
             {/* Product Name */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+              <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                 Product Name
               </label>
               <input
@@ -68,12 +68,12 @@ const ProductDetails = ({ productId }) => {
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+              <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                 Description
               </label>
               <div className="border border-gray-300 dark:border-slate-600 rounded-lg overflow-hidden transition-colors duration-300">
                 {/* Rich Text Toolbar */}
-                <div className="bg-gray-100 dark:bg-slate-700 p-3 border-b border-gray-300 dark:border-slate-600 flex items-center gap-2 flex-wrap transition-colors duration-300">
+                <div className="bg-gray-00 dark:bg-slate-00 p-3 border-b border-gray-300 dark:border-slate-600 flex items-center gap-2 flex-wrap transition-colors duration-300">
                   <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-600 rounded text-gray-600 dark:text-gray-300 transition-colors duration-300">
                     <FiBold size={18} />
                   </button>
@@ -101,7 +101,7 @@ const ProductDetails = ({ productId }) => {
             {/* SKU and Stock Quantity */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                   SKU
                 </label>
                 <input
@@ -112,7 +112,7 @@ const ProductDetails = ({ productId }) => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                   Stock quantity
                 </label>
                 <input
@@ -127,7 +127,7 @@ const ProductDetails = ({ productId }) => {
             {/* Price and Status */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                   Price
                 </label>
                 <input
@@ -138,7 +138,7 @@ const ProductDetails = ({ productId }) => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-300">
+                <label className="block text-sm font-medium  mb-2 transition-colors duration-300">
                   Status
                 </label>
                 <select

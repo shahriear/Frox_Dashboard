@@ -44,7 +44,7 @@ const AllProductsGrid = ({ products, onProductClick }) => {
     >
       {/* Product Image Placeholder */}
       <div className="relative mb-4">
-        <div className="w-full h-40 bg-gray-100 dark:bg-slate-300 rounded-lg flex items-center justify-center mb-3 overflow-hidden transition-colors duration-300">
+        <div className="w-full h-40 bg-gray-00 bg-[var(--products-bg)] rounded-lg flex items-center justify-center mb-3 overflow-hidden transition-colors duration-300">
           {product.image ? (
             <Image
               src={product.image}

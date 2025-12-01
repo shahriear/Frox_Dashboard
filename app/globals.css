@@ -15,10 +15,11 @@ html.dark {
   --foreground: #171717;
 
   /* Custom BG for any section */
-  --section-bg: #eaeeed;
-  --card-bg: #dededeba;
+  --section-bg: #d4d6d8;
+  --card-bg: #fffefe;
   --row-bg:#667dab35;
-  /* --sidebar-bg: #f8fafc; */
+  --products-bg: #dddee0;
+  --sidebar-bg: #f8fafc;
 }
 
 /* Dark Mode */
@@ -29,8 +30,9 @@ html.dark {
   /* Custom BG for any section (dark) */
   --section-bg: #0b1a2e;
   --card-bg: #14273d;
-  /* --sidebar-bg: #0d1829; */
+  --sidebar-bg: #151c25;
   --row-bg:#6e9bf635;
+  --products-bg: #0a1a31;
 }
 
 /* Tailwind inline theme */

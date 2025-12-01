@@ -62,7 +62,7 @@ const AllProductsCompo1 = () => {
   }
 
   return (
-    <div className="w-full bg-gray- border border-gray-300 p-6">
+    <div className="w-full  border border-gray-300 p-6">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-">All Products</h1>
@@ -91,7 +91,7 @@ const AllProductsCompo1 = () => {
       </div>
 
       {/* Table Container */}
-      <div className="bg-whit rounded-lg shadow-sm overflow-x-auto">
+      <div className="bg-[var(--card-bg)] border border-gray-300 rounded-lg shadow-sm overflow-x-auto">
         <table className="w-full min-w-max">
           {/* Table Header */}
           <thead>
@@ -171,7 +171,7 @@ const AllProductsCompo1 = () => {
             {products.map((product, index) => (
               <tr
                 key={product.id}
-                className={`border-b border-gray-100 hover:bg-gray-500 transition-colors ${
+                className={`border-b  border-gray-300 hover:bg-gray-600 transition-colors ${
                   index % 2 === 0 ? 'bg-whit' : 'bg-gray-10'
                 }`}
               >
