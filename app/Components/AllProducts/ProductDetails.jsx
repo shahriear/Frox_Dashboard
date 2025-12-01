@@ -134,7 +134,7 @@ const ProductDetails = ({ productId }) => {
                   type="text"
                   value={price}
                   onChange={e => setPrice(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-00 dark:text-gray-00 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
               <div>
@@ -144,7 +144,7 @@ const ProductDetails = ({ productId }) => {
                 <select
                   value={status}
                   onChange={e => setStatus(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 dark:text-gray-300 bg-white dark:bg-slate-700 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-00 dark:text-gray-00 bg-whit dark:bg-slate-00 transition-colors duration-300"
                 >
                   <option value="Active">Active</option>
                   <option value="Inactive">Inactive</option>
@@ -177,7 +177,7 @@ const ProductDetails = ({ productId }) => {
 
             {/* Product Gallery */}
             <div>
-              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 transition-colors duration-300">
+              <h3 className="text-sm font-medium text-gray-00 dark:text-gray-00 mb-3 transition-colors duration-300">
                 Product Gallery
               </h3>
               <div className="border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-lg p-6 text-center transition-colors duration-300">
