@@ -41,7 +41,7 @@ const ProductDetails = ({ productId }) => {
           {productId && (
             <button
               onClick={handleBack}
-              className="px-4 py-2 bg-gray-200 dark:bg-slate-800 text-white rounded-lg font-medium hover:bg-gray-300 dark:bg-slate-500 transition"
+              className="px-4 py-2 bg-gray-200 dark:bg-blue-800 text-white rounded-lg font-medium hover:bg-gray-500  transition"
             >
               ← Back
             </button>

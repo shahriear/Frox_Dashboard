@@ -2,12 +2,13 @@ import React from 'react';
 
 const Breadcrumb = () => {
   return (
-    <div>
-
-        <div className="text-sm text-gray-00 dark:text-gray-00">Home / <span className="text-gray-700 dark:text-blue-400 font-semibold">Dashboard</span></div>
-      
+    <div className="text-xs sm:text-sm  font-medium">
+      Home /{' '}
+      <span className="text-gray-800 dark:text-blue-400 font-semibold">
+        Dashboard
+      </span>
     </div>
   );
-}
+};
 
 export default Breadcrumb;

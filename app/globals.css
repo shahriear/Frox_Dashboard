@@ -17,7 +17,7 @@ html.dark {
   /* Custom BG for any section */
   --section-bg: #d4d6d8;
   --card-bg: #fffefe;
-  --row-bg:#667dab35;
+  --row-bg: #667dab35;
   --products-bg: #dddee0;
   --sidebar-bg: #f8fafc;
 }
@@ -31,7 +31,7 @@ html.dark {
   --section-bg: #000307;
   --card-bg: #14273d;
   --sidebar-bg: #151c25;
-  --row-bg:#6e9bf635;
+  --row-bg: #6e9bf635;
   --products-bg: #0a1a31;
 }
 
@@ -93,4 +93,89 @@ html.dark {
 }
 .animate-fadeIn {
   animation: fadeIn 0.35s ease-out;
+}
+
+/* Responsive Container Utilities */
+.container-responsive {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Responsive Grid Gap */
+.gap-responsive {
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gap-responsive {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-responsive {
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive Text Sizing */
+.text-responsive-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.text-responsive-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* Responsive Padding */
+.p-responsive {
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .p-responsive {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-responsive {
+    padding: 2rem;
+  }
+}
+
+/* Mobile-friendly scrollbar for tables */
+.table-container {
+  -webkit-overflow-scrolling: touch;
 }
