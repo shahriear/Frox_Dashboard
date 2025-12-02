@@ -1,24 +1,3 @@
-// export default function ProductsRow({ item }) {
-//   return (
-//     <tr className="border-b hover:bg-gray-50 dark:hover:bg-slate-800 dark:bg-slate-800 transition-colors duration-300">
-//       <td className="py-4">
-//         <img src={item.image} className="w-14 rounded" />
-//       </td>
-
-//       <td className="font-semibold">{item.name}</td>
-//       <td>{item.color}</td>
-
-//       <td>
-//         {item.sales} <span className="text-green-500 transition-colors duration-300">↑</span>
-//       </td>
-
-//       <td>{item.available}</td>
-
-//       <td className="font-bold text-lg transition-colors duration-300">${item.price}</td>
-//     </tr>
-//   );
-// }
-
 'use client';
 import { useState } from 'react';
 import { FiMoreHorizontal } from 'react-icons/fi';
@@ -27,58 +6,80 @@ export default function ProductsRow({ item }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <tr className="border-b hover:bg-gray-50 dark:hover:bg-slate-800 dark:bg-slate-800 transition-colors duration-300">
+    <tr className="border-b border-gray-300 dark:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-300">
       {/* Image */}
-      <td className="py-4">
-        <img src={item.image} className="w-14 rounded-md" />
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3">
+        <img
+          src={item.image}
+          className="w-8 h-6 sm:w-10 sm:h-7 md:w-12 md:h-8 rounded-md object-contain flex-shrink-0"
+        />
       </td>
 
       {/* Product Name */}
-      <td className="font-semibold">{item.name}</td>
-
-      {/* Color */}
-      <td>{item.color}</td>
-
-      {/* Sales */}
-      <td>
-        {item.sales}
-        <span className="text-green-500 ml-1 transition-colors duration-300">↑</span>
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 hidden sm:table-cell">
+        <div className="font-semibold text-xs sm:text-sm text-gray-900 dark:text-white whitespace-nowrap truncate">
+          {item.name}
+        </div>
       </td>
 
-      {/* Available (same screenshot style) */}
-      <td>
-        <div className="flex flex-col w-24">
-          <span className="text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">{item.available}</span>
+      {/* Color */}
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 hidden md:table-cell">
+        <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+          {item.color}
+        </div>
+      </td>
 
-          <div className="w-full bg-gray-200 dark:bg-slate-600 h-2 rounded mt-1 transition-colors duration-300">
+      {/* Sales */}
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3">
+        <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-900 dark:text-white">
+          <span>{item.sales}</span>
+          <span className="text-green-500 font-bold">↑</span>
+        </div>
+      </td>
+
+      {/* Available */}
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 hidden sm:table-cell">
+        <div className="flex flex-col w-16 sm:w-20 md:w-24">
+          <span className="text-xs text-gray-600 dark:text-gray-400">
+            {item.available}
+          </span>
+
+          <div className="w-full bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded mt-1 transition-colors duration-300">
             <div
               className="h-full bg-orange-400 rounded transition-colors duration-300"
-              style={{ width: `${(item.available / item.total) * 100}%` }}
+              style={{
+                width: `${(item.available / (item.total || 500)) * 100}%`,
+              }}
             ></div>
           </div>
         </div>
       </td>
 
       {/* Price + 3 dot */}
-      <td className="relative">
-        <div className="flex items-center gap-3">
-          <span className="font-bold text-lg transition-colors duration-300">${item.price}</span>
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 relative">
+        <div className="flex items-center justify-between sm:justify-start gap-2 sm:gap-3">
+          <span className="font-bold text-xs sm:text-sm md:text-base text-gray-900 dark:text-white whitespace-nowrap">
+            ${item.price}
+          </span>
 
-          <button onClick={() => setOpenMenu(!openMenu)} className="p-1">
-            <FiMoreHorizontal className="text-xl text-gray-600 dark:text-gray-300 hover:text-black transition-colors duration-300" />
+          <button
+            onClick={() => setOpenMenu(!openMenu)}
+            className="p-1 sm:p-1.5 hover:bg-gray-200 dark:hover:bg-slate-700 rounded transition-colors duration-300 flex-shrink-0"
+          >
+            <FiMoreHorizontal className="text-base sm:text-lg text-gray-600 dark:text-gray-300" />
           </button>
         </div>
 
         {/* Dropdown menu */}
         {openMenu && (
-          <div className="absolute right-0 mt-2 bg-white dark:bg-slate-700 shadow-xl rounded-md w-32 border z-10  transition-colors duration-300">
-            <button className="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300">
+          <div className="absolute right-0 top-8 mt-1 bg-white dark:bg-slate-800 shadow-lg rounded-lg w-28 sm:w-32 border border-gray-200 dark:border-slate-700 z-20 transition-colors duration-300">
+            <button className="w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors duration-300 border-b border-gray-100 dark:border-slate-700">
               Edit
             </button>
-            <button className="w-full text-left px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-700 dark:bg-slate-700 transition-colors duration-300">
+            <button className="w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors duration-300 border-b border-gray-100 dark:border-slate-700">
               View
             </button>
-            <button className="w-full text-left px-3 py-2 text-red-500 hover:bg-red-50 transition-colors duration-300">
+            <button className="w-full text-left px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors duration-300">
               Delete
             </button>
           </div>

@@ -44,73 +44,89 @@
 
 export default function ReviewsStats() {
   return (
-    <div className="bg-white text-black dark:bg-slate-400 shadow rounded-xl p-6 transition-colors duration-300">
+    <div className="bg-white dark:bg-slate-800 shadow-lg rounded-xl p-3 sm:p-4 md:p-6 transition-colors duration-300">
       {/* Title */}
-      <h3 className="font-semibold mb-3 text-lg transition-colors duration-300">Customer Reviews</h3>
+      <h3 className="font-semibold mb-3 text-base sm:text-lg text-gray-900 dark:text-white transition-colors duration-300">
+        Customer Reviews
+      </h3>
 
       {/* Stars + Rates */}
-      <div className="flex items-center gap-3 mb-4">
-        <div className="text-yellow-400 text-2xl transition-colors duration-300">★★★★★</div>
-        <span className="bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 text-sm px-3 py-1 rounded-md transition-colors duration-300">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+        <div className="text-lg sm:text-xl text-yellow-400 transition-colors duration-300">
+          ★★★★★
+        </div>
+        <span className="bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-lg transition-colors duration-300">
           12k rates
         </span>
       </div>
 
       {/* Total reviews */}
-      <h4 className="text-gray-800 font-semibold mb-3 transition-colors duration-300">Total 12k reviews</h4>
+      <h4 className="text-gray-800 dark:text-gray-200 font-semibold mb-3 text-sm sm:text-base transition-colors duration-300">
+        Total 12k reviews
+      </h4>
 
       {/* Star Progress Bars */}
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {/* 5 star */}
-        <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">5 star</span>
-          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="w-10 sm:w-12 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 flex-shrink-0">
+            5 star
+          </span>
+          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded transition-colors duration-300">
             <div
-              className="bg-purple-600 h-2 rounded transition-colors duration-300"
+              className="bg-purple-600 h-full rounded transition-colors duration-300"
               style={{ width: '95%' }}
             ></div>
           </div>
         </div>
 
         {/* 4 star */}
-        <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">4 star</span>
-          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="w-10 sm:w-12 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 flex-shrink-0">
+            4 star
+          </span>
+          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded transition-colors duration-300">
             <div
-              className="bg-green-400 h-2 rounded transition-colors duration-300"
+              className="bg-green-400 h-full rounded transition-colors duration-300"
               style={{ width: '70%' }}
             ></div>
           </div>
         </div>
 
         {/* 3 star */}
-        <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">3 star</span>
-          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="w-10 sm:w-12 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 flex-shrink-0">
+            3 star
+          </span>
+          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded transition-colors duration-300">
             <div
-              className="bg-blue-400 h-2 rounded transition-colors duration-300"
+              className="bg-blue-400 h-full rounded transition-colors duration-300"
               style={{ width: '50%' }}
             ></div>
           </div>
         </div>
 
         {/* 2 star */}
-        <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">2 star</span>
-          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="w-10 sm:w-12 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 flex-shrink-0">
+            2 star
+          </span>
+          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded transition-colors duration-300">
             <div
-              className="bg-orange-400 h-2 rounded transition-colors duration-300"
+              className="bg-orange-400 h-full rounded transition-colors duration-300"
               style={{ width: '30%' }}
             ></div>
           </div>
         </div>
 
         {/* 1 star */}
-        <div className="flex items-center gap-3">
-          <span className="w-12 text-sm text-gray-600 dark:text-gray-100 transition-colors duration-300">1 star</span>
-          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-2 rounded transition-colors duration-300">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="w-10 sm:w-12 text-xs sm:text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300 flex-shrink-0">
+            1 star
+          </span>
+          <div className="flex-1 bg-gray-200 dark:bg-slate-600 h-1.5 sm:h-2 rounded transition-colors duration-300">
             <div
-              className="bg-red-400 h-2 rounded transition-colors duration-300"
+              className="bg-red-400 h-full rounded transition-colors duration-300"
               style={{ width: '10%' }}
             ></div>
           </div>
@@ -118,20 +134,22 @@ export default function ReviewsStats() {
       </div>
 
       {/* Contact seller form */}
-      <div className="mt-6">
-        <h4 className="font-semibold mb-2">Contact this seller</h4>
+      <div className="mt-4 sm:mt-6">
+        <h4 className="font-semibold mb-2 text-sm sm:text-base text-gray-900 dark:text-white">
+          Contact this seller
+        </h4>
 
         <input
           placeholder="Subject"
-          className="border p-2 w-full rounded mb-3"
+          className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 p-2 sm:p-2.5 w-full rounded-lg text-xs sm:text-sm mb-2 sm:mb-3 transition-colors duration-300"
         />
 
         <textarea
           placeholder="Message"
-          className="border p-2 w-full h-24 rounded mb-3"
+          className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 p-2 sm:p-2.5 w-full h-20 sm:h-24 rounded-lg text-xs sm:text-sm mb-2 sm:mb-3 transition-colors duration-300 resize-none"
         ></textarea>
 
-        <button className="bg-indigo-600 text-white w-full py-2 rounded transition-colors duration-300">
+        <button className="bg-purple-600 hover:bg-purple-700 text-white w-full py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300">
           Send message
         </button>
       </div>
