@@ -9,7 +9,7 @@ export default function ActionsDropdown({
   onViewDetails,
 }) {
   return (
-    <div className="absolute right-0 mt-2 w-36 sm:w-44 md:w-48 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg z-50 transition-colors duration-300">
+    <div className="absolute right-0 top-full mt-1 w-36 sm:w-44 md:w-48 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg z-50 transition-colors duration-300 pointer-events-auto">
       <Link href={'/OrderDetails'}>
         <button className="block w-full text-left px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors duration-300 border-b border-gray-100 dark:border-slate-700">
           View Details

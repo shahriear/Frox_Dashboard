@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../../public/photos/Logo.png';
 import ProfileImage from '../../../public/photos/Avatar.png';
 import { TbExternalLink } from 'react-icons/tb';
@@ -13,11 +13,31 @@ import Link from 'next/link';
 
 const Navber = ({ onToggleSidebar, sidebarOpen }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
       {/* Desktop & Tablet Navigation */}
-      <div className="bg-[var(--sidebar-bg)]  border-b border-b-gray-400  shadow-xl hidden sm:flex w-full h-16 sm:h-20 lg:h-24 items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div
+        className={`sticky top-0 bg-[var(--sidebar-bg)] border-b border-b-gray-400 shadow-xl hidden sm:flex w-full h-16 sm:h-20 lg:h-24 items-center justify-center px-4 sm:px-6 lg:px-8 transition-transform duration-300 z-40 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="flex items-center gap-4 sm:gap-8 md:gap-40 lg:gap-64 justify-center lg:justify-center">
           <div className="flex">
             {/* Logo */}
@@ -76,7 +96,11 @@ const Navber = ({ onToggleSidebar, sidebarOpen }) => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="sm:hidden w-full h-16 flex items-center justify-between px-3 bg-[var(--sidebar-bg)] dark:bg-[var(--sidebar-bg)] shadow-md transition-colors duration-300">
+      <div
+        className={`sticky top-0 sm:hidden w-full h-16 flex items-center justify-between px-3 bg-[var(--sidebar-bg)] dark:bg-[var(--sidebar-bg)] shadow-md transition-all duration-300 z-40 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="flex items-center gap-2 min-w-0">
           {/* Logo - Clickable */}
           <Link href="/" className="flex-shrink-0">

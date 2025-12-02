@@ -31,7 +31,7 @@ export default function TransactionRow({ item }) {
       <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-xs sm:text-sm">
         <StatusBadge status={item.status} />
       </td>
-      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-right">
+      <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-right relative z-10">
         <DropdownMenu />
       </td>
     </tr>

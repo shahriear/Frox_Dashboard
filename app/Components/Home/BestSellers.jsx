@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MoreVertical } from 'lucide-react';
 import Image from 'next/image';
 
@@ -32,14 +32,29 @@ const sellers = [
 
 export default function BestSellers() {
   const [openMenu, setOpenMenu] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = e => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpenMenu(false);
+      }
+    };
+    if (openMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () =>
+        document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [openMenu]);
 
   return (
-    <div className="bg-[var(--card-bg)]  shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 h-full min-h-[300px] sm:min-h-[350px] transition-colors duration-300">
+    <div className="bg-[var(--card-bg)]  shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 h-full min-h-[300px] sm:min-h-[350px] transition-colors duration-300 overflow-visible">
       {/* Top Section */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4 relative gap-2">
-        <h2 className="font-semibold text-base sm:text-lg ">
-          Best Sellers
-        </h2>
+      <div
+        className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4 relative gap-2 z-50"
+        ref={menuRef}
+      >
+        <h2 className="font-semibold text-base sm:text-lg ">Best Sellers</h2>
 
         <button
           onClick={() => setOpenMenu(!openMenu)}
@@ -50,7 +65,7 @@ export default function BestSellers() {
 
         {/* Dropdown Menu */}
         {openMenu && (
-          <div className="absolute right-0 sm:right-0 top-10 sm:top-12 w-40 sm:w-48 bg-gray-100 dark:bg-gray-700 border border-yellow-600 shadow-lg rounded-xl z-20 transition-colors">
+          <div className="absolute right-0 top-full mt-1 w-40 sm:w-48 bg-gray-100 dark:bg-gray-700 border border-yellow-600 shadow-lg rounded-xl z-50 transition-colors">
             <ul className="text-xs sm:text-sm dark:text-gray-200">
               <li className="px-3 sm:px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg cursor-pointer transition-colors">
                 Sales report

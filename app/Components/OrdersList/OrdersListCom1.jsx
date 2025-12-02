@@ -122,7 +122,7 @@ export default function OrdersListCom1() {
         </div>
 
         {/* Table Container - Responsive with scroll */}
-        <div className="border border-gray-300 dark:border-slate-600 rounded-lg overflow-hidden transition-colors duration-300">
+        <div className="border border-gray-300 dark:border-slate-600 rounded-lg transition-colors duration-300 overflow-visible">
           <div className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 bg-white dark:bg-slate-700 transition-colors duration-300 border-b border-gray-300 dark:border-slate-600">
             <h3 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white transition-colors duration-300">
               Recent Orders
@@ -131,7 +131,10 @@ export default function OrdersListCom1() {
 
           {/* Horizontal scroll on mobile */}
           <div className="w-full overflow-x-auto table-container">
-            <table className="w-full text-xs sm:text-sm transition-colors duration-300 min-w-max">
+            <table
+              className="w-full text-xs sm:text-sm transition-colors duration-300 min-w-max"
+              style={{ borderCollapse: 'separate', borderSpacing: 0 }}
+            >
               <thead className="bg-gray-50 dark:bg-slate-600 text-gray-900 dark:text-white transition-colors duration-300">
                 <tr>
                   <th className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left transition-colors duration-300">
@@ -206,7 +209,7 @@ export default function OrdersListCom1() {
                     <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-right text-gray-900 dark:text-white font-medium text-xs sm:text-sm transition-colors duration-300">
                       ${order.total}
                     </td>
-                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-right relative transition-colors duration-300">
+                    <td className="px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-right relative transition-colors duration-300 td-actions">
                       <button
                         className="px-2 py-1 border border-gray-300 dark:border-gray-600 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-300 text-xs sm:text-sm"
                         onClick={() =>

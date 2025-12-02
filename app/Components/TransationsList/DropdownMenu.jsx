@@ -73,7 +73,7 @@ export default function DropdownMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-8 z-50 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 shadow-lg rounded-lg p-1 sm:p-2 w-36 sm:w-40 text-xs sm:text-sm transition-colors duration-300 animate-fadeIn">
+        <div className="absolute right-0 top-full mt-1 z-50 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 shadow-lg rounded-lg p-1 sm:p-2 w-36 sm:w-40 text-xs sm:text-sm transition-colors duration-300 animate-fadeIn">
           <button className="w-full px-2 sm:px-3 py-1.5 sm:py-2 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-900 dark:text-gray-100 rounded cursor-pointer transition-colors duration-300 text-left font-medium text-xs sm:text-sm">
             View details
           </button>

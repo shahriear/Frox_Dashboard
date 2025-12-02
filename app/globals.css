@@ -179,3 +179,22 @@ html.dark {
 .table-container {
   -webkit-overflow-scrolling: touch;
 }
+
+/* Dropdown overflow fix for tables */
+.table-container {
+  overflow-y: visible !important;
+}
+
+.table-container > table {
+  overflow: visible !important;
+}
+
+tbody tr {
+  overflow: visible !important;
+}
+
+.td-actions {
+  position: relative;
+  overflow: visible !important;
+  z-index: 50;
+}
