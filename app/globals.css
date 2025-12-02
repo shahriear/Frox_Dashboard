@@ -24,11 +24,11 @@ html.dark {
 
 /* Dark Mode */
 html.dark {
-  --background: #0b0f19;
+  --background: #0e131e;
   --foreground: #bfbebe;
 
   /* Custom BG for any section (dark) */
-  --section-bg: #0b1a2e;
+  --section-bg: #000307;
   --card-bg: #14273d;
   --sidebar-bg: #151c25;
   --row-bg:#6e9bf635;

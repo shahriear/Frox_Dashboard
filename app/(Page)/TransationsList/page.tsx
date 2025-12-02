@@ -37,25 +37,21 @@ const completedData = [
 const page = () => {
   return (
     <>
-
-    {/* <div className="w-full h-screen bg-amber-600 flex justify-center items-center md:text-5xl text-sm font-bold ">
+      {/* <div className="w-full h-screen bg-amber-600 flex justify-center items-center md:text-5xl text-sm font-bold ">
       <h1>Traqnsation List page</h1>
     </div> */}
-    <div className="p-6 bg-gray-0 dark:bg-slate-00 transition-colors duration-300 ">
+      <div className="p-6 bg-[var(--section-bg)] dark:bg-slate-00 transition-colors duration-300 ">
+        <PageHeader />
+        <FilterBar />
 
-      <PageHeader />
-      <FilterBar />
+        <TransactionTable title="Pending transactions" data={pendingData} />
+        <Pagination />
 
-      <TransactionTable title="Pending transactions" data={pendingData} />
-      <Pagination />
-
-      <TransactionTable title="Completed transactions" data={completedData} />
-      <Pagination />
-
-    </div>
-      
+        <TransactionTable title="Completed transactions" data={completedData} />
+        <Pagination />
+      </div>
     </>
-  )
+  );
 }
 
 export default page

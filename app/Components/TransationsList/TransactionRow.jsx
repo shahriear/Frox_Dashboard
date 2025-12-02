@@ -3,7 +3,7 @@ import DropdownMenu from "./DropdownMenu";
 
 export default function TransactionRow({ item }) {
   return (
-    <tr className="border-b transition-colors duration-300">
+    <tr className="border-b border-gray-400 transition-colors duration-300">
       <td><input type="checkbox" /></td>
       <td className="py-3">{item.orderId}</td>
       <td>${item.paid}</td>

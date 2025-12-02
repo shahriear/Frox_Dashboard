@@ -23,9 +23,9 @@ const AllProductsCompo1 = () => {
   };
 
   // If grid view is selected, render the grid component
-  if (viewMode === 'grid') { 
+  if (viewMode === 'grid') {
     return (
-      <div className="w-full bg-gray- border border-gray-300 p-6">
+      <div className="w-full bg- border border-gray-300 p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-">All Products</h1>
           <div className="flex gap-3">
@@ -62,7 +62,7 @@ const AllProductsCompo1 = () => {
   }
 
   return (
-    <div className="w-full  border border-gray-300 p-6">
+    <div className="w-full bg-[var(--section-bg)]  border border-gray-300 p-6">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-">All Products</h1>

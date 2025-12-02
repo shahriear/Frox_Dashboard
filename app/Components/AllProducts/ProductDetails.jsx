@@ -34,8 +34,8 @@ const ProductDetails = ({ productId }) => {
   };
 
   return (
-    <div className=" w-full min-h-screen bg-gray-0 dark:bg-slate-00 p-8 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto bg-[var(--section-bg)] p-5">
+    <div className=" w-full min-h-screen bg-[var(--section-bg)] bg-gray-0 dark:bg-slate-00 p-8 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto bg-[var(--card-bg)]  p-5">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
           {productId && (
@@ -46,7 +46,9 @@ const ProductDetails = ({ productId }) => {
               ← Back
             </button>
           )}
-          <h1 className="text-3xl font-bold transition-colors duration-300">Product Details</h1>
+          <h1 className="text-3xl font-bold transition-colors duration-300">
+            Product Details
+          </h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -62,7 +64,7 @@ const ProductDetails = ({ productId }) => {
                 placeholder="Type name here"
                 value={productName}
                 onChange={e => setProductName(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-700 dark:text-gray-300 transition-colors duration-300"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 dark:text-gray-500 transition-colors duration-300"
               />
             </div>
 
@@ -93,7 +95,7 @@ const ProductDetails = ({ productId }) => {
                   placeholder="Type description here"
                   value={description}
                   onChange={e => setDescription(e.target.value)}
-                  className="w-full px-4 py-3 focus:outline-none placeholder-gray-400 text-gray-700 dark:text-gray-300 min-h-[140px] resize-none transition-colors duration-300"
+                  className="w-full px-4 py-3 focus:outline-none placeholder-gray-400  dark:text-gray-500 min-h-[140px] resize-none transition-colors duration-300"
                 />
               </div>
             </div>
@@ -108,7 +110,7 @@ const ProductDetails = ({ productId }) => {
                   type="text"
                   value={sku}
                   onChange={e => setSku(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500  dark:text-gray-500 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
               <div>
@@ -119,7 +121,7 @@ const ProductDetails = ({ productId }) => {
                   type="text"
                   value={stockQuantity}
                   onChange={e => setStockQuantity(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 dark:text-gray-300 placeholder-gray-400 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-500 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
             </div>
@@ -134,7 +136,7 @@ const ProductDetails = ({ productId }) => {
                   type="text"
                   value={price}
                   onChange={e => setPrice(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-00 dark:text-gray-00 placeholder-gray-400 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-500 placeholder-gray-400 transition-colors duration-300"
                 />
               </div>
               <div>
@@ -144,7 +146,7 @@ const ProductDetails = ({ productId }) => {
                 <select
                   value={status}
                   onChange={e => setStatus(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-00 dark:text-gray-00 bg-whit dark:bg-slate-00 transition-colors duration-300"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-500 bg-whit dark:bg-slate-00 transition-colors duration-300"
                 >
                   <option value="Active">Active</option>
                   <option value="Inactive">Inactive</option>
@@ -157,10 +159,10 @@ const ProductDetails = ({ productId }) => {
           <div className="lg:col-span-1 space-y-6">
             {/* Product Image Preview */}
             <div>
-              <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 transition-colors duration-300">
+              <label className="block text-sm font-medium  mb-3 transition-colors duration-300">
                 Product Image
               </label>
-              <div className="w-full aspect-square bg-gray-100 dark:bg-slate-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-slate-600 overflow-hidden transition-colors duration-300">
+              <div className="w-full aspect-square bg-[var(--products-bg)] rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-slate-600 overflow-hidden transition-colors duration-300">
                 {product.image ? (
                   <Image
                     src={product.image}
@@ -170,7 +172,9 @@ const ProductDetails = ({ productId }) => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300">No Image</span>
+                  <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                    No Image
+                  </span>
                 )}
               </div>
             </div>
@@ -182,7 +186,10 @@ const ProductDetails = ({ productId }) => {
               </h3>
               <div className="border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-lg p-6 text-center transition-colors duration-300">
                 <div className="flex flex-col items-center justify-center gap-2">
-                  <FiImage size={32} className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300" />
+                  <FiImage
+                    size={32}
+                    className="text-gray-400 dark:text-gray-500 dark:text-gray-400 transition-colors duration-300"
+                  />
                   <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
                     Drop your image here, or browse
                   </p>
@@ -208,7 +215,9 @@ const ProductDetails = ({ productId }) => {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">No Img</span>
+                      <span className="text-gray-400 dark:text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">
+                        No Img
+                      </span>
                     )}
                   </div>
                   <div className="flex-1 min-w-0">

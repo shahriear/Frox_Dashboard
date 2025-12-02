@@ -13,7 +13,7 @@ import TotalRevenue from "../../Components/Home/TotalRevenue";
 const page = () => {
   return (
     <>
-      <div className="p-6   space-y-6 w-full  transition-colors duration-300">
+      <div className="p-6 bg-[var(--section-bg)]  space-y-6 w-full  transition-colors duration-300">
         <Breadcrumb />
 
         <div className="flex justify-between items-center">
