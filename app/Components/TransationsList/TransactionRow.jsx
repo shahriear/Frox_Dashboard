@@ -7,8 +7,8 @@ export default function TransactionRow({ item }) {
       <td><input type="checkbox" /></td>
       <td className="py-3">{item.orderId}</td>
       <td>${item.paid}</td>
-      <td className="flex items-center gap-2">
-        <img src={item.img} className="w-8 h-5" />
+      <td className="flex items-center gap-3">
+        <img src={item.img} className="w-8 h-5 mt-2 object-contain" />
         {item.method}
       </td>
       <td>{item.date}</td>

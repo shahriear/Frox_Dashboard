@@ -65,7 +65,7 @@ const AllProductsCompo1 = () => {
     <div className="w-full bg-[var(--section-bg)]  border border-gray-300 p-6">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-">All Products</h1>
+        <h1 className="text-2xl font-bold text-gray-">Alll Products</h1>
         <div className="flex gap-3">
           <button
             onClick={() => setViewMode('list')}
@@ -177,7 +177,10 @@ const AllProductsCompo1 = () => {
               >
                 {/* Image Column */}
                 <td className="px-6 py-4">
-                  <div className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                  <div
+                    onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                    className="w-14 h-14 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden"
+                  >
                     {product.image ? (
                       <Image
                         src={product.image}
@@ -208,12 +211,18 @@ const AllProductsCompo1 = () => {
                 </td>
 
                 {/* SKU Column */}
-                <td className="px-6 py-4">
+                <td
+                  onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                  className="px-6 py-4"
+                >
                   <span className="text-sm text-gray-00">{product.sku}</span>
                 </td>
 
                 {/* Price Column */}
-                <td className="px-6 py-4">
+                <td
+                  onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                  className="px-6 py-4"
+                >
                   <span className="text-sm font-semibold text-gray-00">
                     {product.price}
                   </span>
@@ -221,7 +230,10 @@ const AllProductsCompo1 = () => {
 
                 {/* Status Column */}
                 <td className="px-6 py-4">
-                  <div className="flex items-center gap-2">
+                  <div
+                    onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                    className="flex items-center gap-2"
+                  >
                     <span className="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
                     <span className="text-sm text-gray-00">
                       {product.status}
@@ -230,15 +242,26 @@ const AllProductsCompo1 = () => {
                 </td>
 
                 {/* QTY Column */}
-                <td className="px-6 py-4">
+                <td
+                  onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                  className="px-6 py-4"
+                >
                   <span className="text-sm text-gray-00">{product.qty}</span>
                 </td>
 
                 {/* Rating Column */}
-                <td className="px-6 py-4">{renderStars(product.rating)}</td>
+                <td
+                  onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                  className="px-6 py-4"
+                >
+                  {renderStars(product.rating)}
+                </td>
 
                 {/* Sales Column */}
-                <td className="px-6 py-4">
+                <td
+                  onClick={() => router.push(`/ProductDetails/${product.id}`)}
+                  className="px-6 py-4"
+                >
                   <span className="text-sm text-gray-00">{product.sales}</span>
                 </td>
 

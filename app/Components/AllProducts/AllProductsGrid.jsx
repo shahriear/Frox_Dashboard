@@ -38,10 +38,7 @@ const AllProductsGrid = ({ products, onProductClick }) => {
   };
 
   const ProductCard = ({ product }) => (
-    <div
-      onClick={() => handleProductClick(product.id)}
-      className="bg-whit dark:bg-slate- border border-gray-200 dark:border-slate-600 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer hover:border-purple-300"
-    >
+    <div className="bg-whit dark:bg-slate- border border-gray-200 dark:border-slate-600 rounded-lg p-4 hover:shadow-md transition-shadow  hover:border-purple-300">
       {/* Product Image Placeholder */}
       <div className="relative mb-4">
         <div className="w-full h-40 bg-gray-00 bg-[var(--products-bg)] rounded-lg flex items-center justify-center mb-3 overflow-hidden transition-colors duration-300">
@@ -52,12 +49,15 @@ const AllProductsGrid = ({ products, onProductClick }) => {
               width={200}
               height={160}
               className="w-full h-full object-contain"
+              onClick={() => handleProductClick(product.id)}
             />
           ) : (
-            <span className="text-gray-00 dark:text-gray-00 transition-colors duration-300">No Image</span>
+            <span className="text-gray-00 dark:text-gray-00 transition-colors duration-300 ">
+              No Image
+            </span>
           )}
         </div>
-        <button className="absolute top-2 right-2 text-gray-00 dark:text-gray-00  hover:text-w transition-colors duration-300">
+        <button className="absolute top-2 right-2 text-gray-00 dark:text-gray-00 cursor-pointer  hover:text-w transition-colors duration-300">
           <MdMoreVert size={20} />
         </button>
       </div>
@@ -70,13 +70,19 @@ const AllProductsGrid = ({ products, onProductClick }) => {
       {/* Rating */}
       <div className="flex items-center gap-2 mb-3">
         {renderStars(product.rating)}
-        <span className="text-xs text-gray-00 dark:text-gray-00 transition-colors duration-300">({product.reviews})</span>
+        {/* <span className="text-xs text-gray-00 dark:text-gray-00 transition-colors duration-300">
+          ({product.reviws})
+        </span> */}
       </div>
 
       {/* Price and SKU */}
       <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-bold text-gray-00 dark:text-gray-00 transition-colors duration-300">{product.price}</span>
-        <span className="text-xs text-gray-00 dark:text-gray-00 transition-colors duration-300">{product.sku}</span>
+        <span className="text-sm font-bold text-gray-00 dark:text-gray-00 transition-colors duration-300">
+          {product.price}
+        </span>
+        <span className="text-xs text-gray-00 dark:text-gray-00 transition-colors duration-300">
+          {product.sku}
+        </span>
       </div>
 
       {/* Description */}
@@ -93,7 +99,9 @@ const AllProductsGrid = ({ products, onProductClick }) => {
       </div>
 
       {/* Stock Info */}
-      <div className="text-xs text-gray-600 dark:text-gray-300 border-t pt-3 transition-colors duration-300">{product.stock}</div>
+      <div className="text-xs text-gray-600 dark:text-gray-300 border-t pt-3 transition-colors duration-300">
+        {product.stock}
+      </div>
     </div>
   );
 
