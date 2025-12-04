@@ -1,4 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  color-scheme: dark;
+}
 
 /* :root {
   --background: #ffffff;
@@ -10,34 +17,34 @@ html.dark {
   --foreground: #ededed;
 } */
 /* Default Light Mode */
-:root {
+/* :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #171717; */
 
-  /* Custom BG for any section */
-  --section-bg: #d4d6d8;
+/* Custom BG for any section */
+/* --section-bg: #d4d6d8;
   --card-bg: #fffefe;
   --row-bg: #667dab35;
   --products-bg: #dddee0;
   --sidebar-bg: #f8fafc;
-}
+} */
 
 /* Dark Mode */
-html.dark {
+/* html.dark {
   --background: #0e131e;
-  --foreground: #bfbebe;
+  --foreground: #bfbebe; */
 
-  /* Custom BG for any section (dark) */
-  --section-bg: #000307;
+/* Custom BG for any section (dark) */
+/* --section-bg: #000307;
   --card-bg: #14273d;
   --sidebar-bg: #151c25;
   --row-bg: #6e9bf635;
   --products-bg: #0a1a31;
-}
+} */
 
 /* Tailwind inline theme */
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -49,7 +56,7 @@ html.dark {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 @keyframes slideInLeft {
   from {

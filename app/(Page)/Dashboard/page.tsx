@@ -12,7 +12,7 @@ import TotalRevenue from '../../Components/Home/TotalRevenue';
 const page = () => {
   return (
     <>
-      <div className="w-full min-h-screen bg-[var(--section-bg)]  transition-colors duration-300">
+      <div className="w-full min-h-screen  bg-gray-200 dark:bg-slate-800 transition-colors duration-300">
         {/* Main Container with responsive padding */}
         <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-5 md:py-6 lg:py-8">
           {/* Content Wrapper - Max width for larger screens */}

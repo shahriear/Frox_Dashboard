@@ -48,7 +48,7 @@ export default function BestSellers() {
   }, [openMenu]);
 
   return (
-    <div className="bg-[var(--card-bg)]  shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 h-full min-h-[300px] sm:min-h-[350px] transition-colors duration-300 overflow-visible">
+    <div className="bg-white dark:bg-[#2b3f64]  shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 h-full min-h-[300px] sm:min-h-[350px] transition-colors duration-300 overflow-visible">
       {/* Top Section */}
       <div
         className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4 relative gap-2 z-50"
@@ -92,7 +92,7 @@ export default function BestSellers() {
         {sellers.map(seller => (
           <div
             key={seller.id}
-            className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-[var(--row-bg)] dark:bg-gray-600 p-2 sm:p-3 rounded-lg sm:rounded-xl transition-colors gap-2"
+            className="flex flex-col sm:flex-row sm:items-center sm:justify-between dark:bg-gradient-to-r from-[#2b3f64] via-[#2b3f64] to-[#2b3f64] bg-gray-200 border-2 border-gray-300 p-2 sm:p-3 rounded-lg sm:rounded-xl transition-colors gap-2"
           >
             <div className="flex items-center gap-2 sm:gap-3 min-w-0">
               <Image

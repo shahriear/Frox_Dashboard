@@ -65,7 +65,7 @@ export default function OrdersListCom1() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-gray-50 dark:bg-slate-900 transition-colors duration-300 p-3 sm:p-4 md:p-6">
+    <div className="w-full min-h-screen bg-gray-300 dark:bg-slate-900 transition-colors duration-300 p-3 sm:p-4 md:p-6">
       <div className="mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-300 dark:border-slate-600 p-3 sm:p-4 md:p-6 transition-colors duration-300">
         {/* Header Section - Responsive */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">

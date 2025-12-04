@@ -28,7 +28,7 @@ const data = [
 
 export default function SalesPerformance() {
   return (
-    <div className="bg-[var(--card-bg)] shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 col-span-1 sm:col-span-2 h-64 sm:h-80 md:h-96 min-h-[300px] transition-colors duration-300">
+    <div className="dark:bg-gradient-to-r from-[#2b3f64] via-[#2b3f64] to-[#2b3f64] bg-white shadow rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 col-span-1 sm:col-span-2 h-64 sm:h-80 md:h-96 min-h-[300px] transition-colors duration-300">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4 gap-2">
         <h2 className="font-semibold text-sm sm:text-base md:text-lg ">
